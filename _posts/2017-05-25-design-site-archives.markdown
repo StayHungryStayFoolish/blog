@@ -19,28 +19,26 @@ tags:
 
 >###  设计前构思
 
-- <p>[UI 模型、配色]<a href="http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren" target="_blank">UI 配套组件 根据色值搜索</a></p>
--  [UI 模型、配色](http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren)  设计前参考
+-  <p><a href="http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren" target="_blank">「 花瓣 配色 」</a></p>
 
--  [Flat](http://flatui.com/) 扁平化、简约整体布局
+-  <p><a href="http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren" target="_blank">「 花瓣 Model 」</a>「 扁平化、简约整体布局 」</p>
 
--  [Medi](https://mediaqueri.es/) 响应式网站整体布局
+-  <p><a href="https://mediaqueri.es/" target="_blank">「 Mediaqueru 」</a>「 响应式网站整体布局 」</p>
 
-- [OnePage](http://www.onepagemania.com/) 迷你单页
+-  <p><a href="http://www.onepagemania.com/" target="_blank">「 OnePage I 」</a>「 优秀单页 I 」</p>
 
-- [OnePage](https://onepagelove.com/) 优秀单页
+-  <p><a href="https://onepagelove.com/" target="_blank">「 OnePage II 」</a>「 优秀单页 II 」</p>
 
--  [Mater](https://www.materialpalette.com/) 网站框架配色
+-  <p><a href="https://www.materialpalette.com/" target="_blank">「 MaPal 」</a>「 网站框架配色 」</p>
 
--  [Coll](https://www.collectui.com/) 设计灵感、覆盖各种页面
+-  <p><a href="https://www.collectui.com/" target="_blank">「 ColUI 」</a>「 设计灵感、覆盖各种页面 」</p>
 
--  [Colors](https://coolors.co/browser/latest/1)  APP 配色
+-  <p><a href="https://uigradients.com" target="_blank">「 Gradients 」</a>「 渐变色值 」</p>
 
--  [UI](https://uigradients.com) 渐变色值
+-  <p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">「 TopTal 」</a>「 背景纹理 I 」</p>
 
--  [BG](https://www.toptal.com/designers/subtlepatterns/) 背景纹理、风格偏清新
+-  <p><a href="https://www.transparenttextures.com/" target="_blank">「 TransParent 」</a>「 背景纹理 I 」</p>
 
--  [BG](https://www.transparenttextures.com/) 背景纹理、即视效果好
 
 ---
 
@@ -52,86 +50,93 @@ tags:
 
 >## 图片类
 
--  [Pexels](https://www.pexels.com)  速度快、质量好
+-  <p><a href="https://www.pexels.com" target="_blank">「 Pexels 」</a>「 不翻墙、速度快、质量高、资源多 」</p>
 
--  [Unsplash](https://unsplash.com/) 速度稍慢、质量好
+-  <p><a href="https://unsplash.com/" target="_blank">「 UnSplash 」</a>「 翻墙、速度稍慢、质量高、资源多 」</p>
 
--  [Pixabay](https://pixabay.com/) 按图片方向搜索、矢量、视频、分类
+-  <p><a href="https://pixabay.com/" target="_blank">「 Pixabay 」</a>「 图片方向搜索、矢量、视频、分类详细 」</p>
 
-- [Lifeofpix](http://www.lifeofpix.com/)  生活图片多、精准找图不方便
+-  <p><a href="http://www.lifeofpix.com/" target="_blank">「 Lifeofpix 」</a>「 生活图片多 」</p>
 
-- [Foter](http://foter.com/)  图片尺寸偏小
+-  <p><a href="http://foter.com/" target="_blank">「 Pexels 」</a>「 图片尺寸偏小 」</p>
 
-- [Site](https://www.sitebuilderreport.com/)  图片多、速度快
+-  <p><a href="https://www.sitebuilderreport.com/" target="_blank">「 SiteBuilderReport 」</a>「 图片多、速度快 」</p>
 
-- [TWN](http://nos.twnsnd.co/)  怀旧、复古图片
+-  <p><a href="http://nos.twnsnd.co/" target="_blank">「  Nos 」</a>「 怀旧、复古图片 」</p>
 
--  [Desinger](http://www.designerspics.com/) 资源偏少
+-  <p><a href="http://www.designerspics.com/" target="_blank">「 DesignerPic 」</a>「 资源偏少 」</p>
 
-- [泼辣修图](http://www.polaxiong.com/)  故事 + 检索
+-  <p><a href="http://www.polaxiong.com/" target="_blank">「 Pola 」</a>「 适合文案配图 」</p>
+
+-  <p><a href="http://foter.com/" target="_blank">「 Pexels 」</a>「 图片尺寸偏小 」</p>
+
 
 ---
 
 >## PSD
+- <p><a href="http://888pic.com/" target="_blank">「 包图 」</a>「 提供整套 PSD、PPT、内容一般、拼图方便、比较实用 」</p>
 
-- [包图](http://888pic.com/) 提供整套 PSD、PPT、内容一般、拼图方便、比较实用
+- <p><a href="http://365psd.com/" target="_blank">「 365Psd 」</a>「 提供整套下载、内容优秀 」</p>
 
-- [365PSD](http://365psd.com/) 提供整套 PSD、内容优秀
+- <p><a href="http://dbfreebies.co/" target="_blank">「 FreeBies 」</a>「 侧重主页背景、字体、内容优秀 」</p>
 
-- [DBFree](http://dbfreebies.co/) 偏向于主页背景、字体、内容优秀
+- <p><a href="https://freebiesbug.com/" target="_blank">「 Free 」</a>「 整套 Psd、字体、内容优秀 」</p>
 
-- [FreeBiesBug](https://freebiesbug.com/) 提供整套 PSD、字体、内容优秀
+- <p><a href="http://foter.com/" target="_blank">「 Pexels 」</a>「 图片尺寸偏小 」</p>
 
-- [PSD](http://www.freepik.com/) 传统资源、数据更新慢
+- <p><a href="http://foter.com/" target="_blank">「 Pexels 」</a>「 图片尺寸偏小 」</p>
+
 
 ---
 
 >## 图标类
 
-- [LogoEPS](http://www.logoeps.com/) 矢量 logo
+- <p><a href="http://www.easyicon.net/" target="_blank">「 EasyICON 」</a>「 支持中文搜索 」</p>
 
-- [Easy](http://www.easyicon.net/) 支持中文搜索
+- <p><a href="http://www.logoeps.com/" target="_blank">「 LogoEPS 」</a>「 矢量 logo 」</p>
 
-- [iConFinder](https://www.iconfinder.com/)  部分收费、速度慢
+- <p><a href="https://www.iconfinder.com/" target="_blank">「 ICONFinder 」</a>「 速度慢、部分收费 」</p>
 
 ---
 
 >## 优秀作品赏析
 
-- [Dribbble](https://dribbble.com/)
+- <p><a href="https://dribbble.com/" target="_blank">「 Dribbble 」</a>「 Dribbble 」</p>
 
-- [ABD](http://abduzeedo.com/)
+- <p><a href="http://abduzeedo.com/" target="_blank">「 ABDZeedo 」</a>「 ABDZeedo 」</p>
 
-- [Nav](http://navnav.co/) 偏模型、特效类
+- <p><a href="http://navnav.co/" target="_blank">「 Nav 」</a>「 Nav 模型、特效 」</p>
 
-- [UI](http://uigarage.net/) APP 页面
+- <p><a href="http://uigarage.net/" target="_blank">「 UIGarage 」</a>「 APP 界面 I 」</p>
 
-- [Mobile](http://www.mobile-patterns.com/) APP 页面
+- <p><a href="http://www.mobile-patterns.com/" target="_blank">「 Mo-Pattern 」</a>「 APP 界面 II 」</p>
 
 
 >## 设计赏析
 
-- [ABD](https://www.behance.net/) 优秀设计
+- <p><a href="https://www.behance.net/" target="_blank">「 Behance 」</a>「 优秀设计 」</p>
 
-- [Logo](https://logopond.com/) Logo设计
+- <p><a href="https://logopond.com/" target="_blank">「 LogoPond 」</a>「 Logo 设计 」</p>
 
-- [DesSpi](http://designspiration.net/) 配色经典、作品优秀
+- <p><a href="http://designspiration.net/" target="_blank">「 Design 」</a>「 配色经典、作品优秀 」</p>
 
-- [CSS](http://www.cssdesignawards.com/) 优秀网站赏析
+- <p><a href="http://www.cssdesignawards.com/" target="_blank">「 CssDesign 」</a>「 优秀网站 」</p>
 
-- [AWWW](https://www.awwwards.com/)
+- <p><a href="https://www.awwwards.com/" target="_blank">「  AWards 」</a>「 AWards 」</p>
+
 
 >## 工具类
 
-- [识别中文字体](http://www.qiuziti.com/)
+- <p><a href="http://www.qiuziti.com/" target="_blank">「 QiuZiTi 」</a>「 识别中文字体 」</p>
 
-- [识别英文字体](http://www.myfonts.com/WhatTheFont/)
+- <p><a href="http://www.myfonts.com/WhatTheFont/" target="_blank">「 MyFonts 」</a>「 识别英文字体 」</p>
 
-- [Font](http://www.abstractfonts.com/) 英文字体下载
+- <p><a href="http://www.abstractfonts.com/" target="_blank">「 AbstractFonts 」</a>「 英文字体下载 」</p>
 
-- [综合导航  I](http://hao.shejidaren.com/)
+- <p><a href="http://hao.shejidaren.com/" target="_blank">「 QiuZiTi 」</a>「 综合导航  I 」</p>
 
-- [综合导航 II](http://hao.uisdc.com/)
+- <p><a href="http://hao.uisdc.com/" target="_blank">「 QiuZiTi 」</a>「 综合导航  I 」</p>
+
 
 ---
 
@@ -143,17 +148,24 @@ tags:
 
 ---
 
->## 设计三步
+>## 如何成为一个优秀的设计师 ?
+    - 如何看作品。
+    - 临摹别人的。
+    - 借鉴为自己的。
+
+>## 设计基本的三步
 
 > #### I.根据设计要求，确定风格、构思框架
 
 根据行业情况，确定风格。如：商务、文艺、极简、卡哇伊、中国风、科技感。
 
-搭建框架，去相关网站配色，取色值，期间需要根据风格确定，扁平化、立体感等效果。
+搭建框架，去相关网站配色，取色值，期间需要根据风格确定，扁平化、立体感
+
+等效果。
 
 包括 Button 颜色搭配，要有一个整体的把控。建议另外复制一张版面。主版实现要求，
 
-副版标注要求、色值、图片风格，以便随时校对。并在副版上试着实现颜色搭配，
+副版标注要求、色值、图片风格，以便随时校对。并在副版上试着实现颜色搭配
 
 看下是否符合要求。根据刚才取的色值，在素材网站，寻找色值相近、风格类似的图片。
 
@@ -174,9 +186,13 @@ Logo 位置、大小是否符合当前整个页面的比例、是否突兀、水
 
 查看网站图片和框架颜色配色以后，是否有不协调的感觉。如色感太亮、太艳或太暗
 
-作品放大、缩小多次，感受下整体视觉是否符合设计之初的标准。是更好了，还是没达到要求。
+作品放大、缩小多次，感受下整体视觉是否符合设计之初的标准。是更好了
 
-如果找不出问题，就休息一会，再看，或许会发现还有不足的地方，或许你还可以修改的更好。
+还是没达到要求。
+
+如果找不出问题，就休息一会，再看，或许会发现还有不足的地方，
+
+或许你还可以设计的更好。
 
 ---
 
