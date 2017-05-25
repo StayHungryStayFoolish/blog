@@ -2,7 +2,7 @@
 layout:     post
 title:      "如果没有设计师，世界将没有色彩 —— If the world no designer The world will have no color"
 subtitle:   "设计素材网站归档 - Design site archives"
-date:       2015-06-01 12:00:00
+date:       2017-05-25 12:00:00
 author:     "Bonismo"
 header-img: "img/post-bg-design-ui.jpg"
 header-mask: 0.3
