@@ -133,9 +133,9 @@ tags:
 
 - <p><a href="http://www.abstractfonts.com/" target="_blank">「 AbstractFonts 」</a>「 英文字体下载 」</p>
 
-- <p><a href="http://hao.shejidaren.com/" target="_blank">「 QiuZiTi 」</a>「 综合导航  I 」</p>
+- <p><a href="http://hao.shejidaren.com/" target="_blank">「 综合导航  I 」</a>「 综合导航  I 」</p>
 
-- <p><a href="http://hao.uisdc.com/" target="_blank">「 QiuZiTi 」</a>「 综合导航  I 」</p>
+- <p><a href="http://hao.uisdc.com/" target="_blank">「 综合导航  II 」</a>「 综合导航  II 」</p>
 
 
 ---
@@ -149,9 +149,12 @@ tags:
 ---
 
 >## 如何成为一个优秀的设计师 ?
-    - 如何看作品。
-    - 临摹别人的。
-    - 借鉴为自己的。
+
+>> ##### 大量看作品
+
+>> ##### 临摹别人的
+
+>> ##### 借鉴为自己的
 
 >## 设计基本的三步
 
