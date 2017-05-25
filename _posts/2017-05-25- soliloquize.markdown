@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "Hello 2015"
-subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
+title:      "Soliloquize"
+subtitle:   " \"自言自语\""
+date:       2017-05-25 12:00:00
 author:     "Bonismo"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-sol.jpg"
 catalog: true
 tags:
     -
