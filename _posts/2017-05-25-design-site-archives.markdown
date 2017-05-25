@@ -19,7 +19,7 @@ tags:
 
 >###  设计前构思
 
--  <p><a href="http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren" target="_blank">「 花瓣 配色 」</a></p>
+-  <p><a href="http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren" target="_blank">「 花瓣 配色 」</a>「 布局、配色 」</p>
 
 -  <p><a href="http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren" target="_blank">「 花瓣 Model 」</a>「 扁平化、简约整体布局 」</p>
 
