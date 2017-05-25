@@ -19,6 +19,7 @@ tags:
 
 >###  设计前构思
 
+- <p>[UI 模型、配色]<a href="http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren" target="_blank">UI 配套组件 根据色值搜索</a></p>
 -  [UI 模型、配色](http://huaban.com/explore/UIjiemianyuanxing/?md=bdwzshejidaren)  设计前参考
 
 -  [Flat](http://flatui.com/) 扁平化、简约整体布局
