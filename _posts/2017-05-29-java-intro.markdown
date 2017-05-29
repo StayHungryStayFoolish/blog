@@ -56,6 +56,12 @@ tags:
     <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-5.jpg?raw=true" height="300" width="700" />
 </div>
 
+- Java 特性
+
+    - Write once, Run anywhere
+
+        跨平台
+
 - 开发环境
 
     - 系统环境
