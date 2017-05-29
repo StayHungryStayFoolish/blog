@@ -103,16 +103,24 @@ tags:
 
 - Hello World
 
-        新建一个 Class 文件， 并命名为 Test
+            新建一个 Class 文件， 并命名为 Test
 
-        // Hello.java
-         public class Test {
-         //    psvm + Tab
-         //    sout + Enter
-             public static void main(String[] args) {
-                 System.out.println("Hello,world!");
+            // Hello.java
+             public class Test {
+             //    psvm + Tab
+             //    sout + Enter
+                 public static void main(String[] args) {
+                     System.out.println("Hello,world!");
+                 }
              }
-         }
+
+ -
+
+``` java
+
+    public class Test
+
+```
 
 
 
