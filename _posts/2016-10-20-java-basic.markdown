@@ -26,6 +26,8 @@ tags:
 
 ## 命名规范
 
+### 编程最头疼的事，不是空指针，不是设计思想，而是命名
+
 <div>
     <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/java/name.jpg?raw=true" height="700" width="600" />
 </div>
@@ -48,6 +50,25 @@ tags:
 开源项目的源码匹配出与这些词汇相关的变量名和函数名。Codelf 可以选择开发语言进行搜索，
 
 结果会把同个源码文件里匹配的变量名排在一起,如你选择“Java”然后搜索“苹果”
+
+- Camel Case 驼峰命名
+
+    - 首个单词字母大写，第二个单词首字母大写 HelloWorld
+
+    - 避免使用拼音、禁止使用汉字
+
+
+- 命名要点
+
+    - List 定义的变量 应该 List 后缀结尾 arrayList
+
+    - Map 定义的变量 应该 Map 后缀结尾 hashMap
+
+    - Array 数组定义的变量 应该 s 后缀结尾 students
+
+    - 尽量避免过长命名
+
+    - 方法名尽量命名为该方法实现的功能 getName
 
 
 
