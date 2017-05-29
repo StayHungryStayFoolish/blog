@@ -53,34 +53,37 @@ tags:
 - Java 语言 2016年排名
 
 <div>
-    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-5.jpg?raw=true" height="300" width="700" />
+    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/java/order.jpg?raw=true" height="600" width="550" />
 </div>
 
 - Java 特性
 
     - Write once, Run anywhere
 
-        跨平台
+        JVM 可以实现跨平台
 
-- 开发环境
 
-    - 系统环境
 
-             OS
+## 开发环境
 
-            Linux
 
-             Windows
+ - 系统环境
 
-    + 开发软件
+         OS
 
-             InteliJ IDEA
+         Linux
 
-             Eclipse
+         Windows
 
-             Visual Studio Code
+ - 开发软件
 
-             Sublim Text
+          InteliJ IDEA
+
+          Eclip
+
+          Visual Studio Code
+
+          Sublim Text
 
 - 开发环境配置
 
@@ -88,15 +91,15 @@ tags:
 
     - 验证环境
 
-            打开 Terminal 或者 CMD
+             打开 Terminal 或者 CMD
 
-            输入 :
+             输入 :
 
-            java
+             java
 
-            javac
+             javac
 
-            java -version
+             java -version
 
 - Hello World
 
