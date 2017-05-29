@@ -51,14 +51,18 @@ tags:
 
 结果会把同个源码文件里匹配的变量名排在一起,如你选择“Java”然后搜索“苹果”
 
+#### 类名
+
 - Camel Case 驼峰命名
 
     - 首个单词字母大写，第二个单词首字母大写 HelloWorld
 
     - 避免使用拼音、禁止使用汉字
 
+#### 方法及变量名字
 
-- 命名要点
+
+- 命名要点 首字母小写，第二个以后每个单词首字母大写
 
     - List 定义的变量 应该 List 后缀结尾 arrayList
 
@@ -70,6 +74,42 @@ tags:
 
     - 方法名尽量命名为该方法实现的功能 getName
 
+#### 关键字
 
-
+|类别|关键字|说明|
+|---|:---:|:---:|
+|访问控制|private|私有的|
+||protected|受保护的|
+||public|公共的|
+|-|-|-|
+|类、方法和变量修饰符|abstract|声明抽象|
+||class|类|
+||extends|继承、扩展|
+||final|终极、不可改变|
+||implements|实现|
+||interface|接口|
+||native|本地|
+||new|新建、创建|
+||static|静态|
+||strictfp|精准|
+||synchronized|同步|
+||transient|短暂|
+||volatile|不稳定|
+|-|-|-|
+|控制语句|||
+||break|跳出当前循环|
+||continue|继续|
+||return|返回|
+||do|运行|
+||while|循环|
+||if|如果|
+||else|否则|
+||for|循环|
+||instanceof|实例|
+||switch|选择执行|
+||case|条件，switch 来选择|
+||default|默认|
+||||
+||||
+||||
 
