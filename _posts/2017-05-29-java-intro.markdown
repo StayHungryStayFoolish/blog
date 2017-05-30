@@ -91,9 +91,9 @@ tags:
 
     - 验证环境
 
-             打开 Terminal 或者 CMD
+      打开 Terminal 或者 CMD
 
-             输入 :
+      输入 :
 
              java
 
@@ -101,25 +101,19 @@ tags:
 
              java -version
 
-- Hello World
+### Hello World
 
-            新建一个 Class 文件， 并命名为 Test
-
-            // Hello.java
-             public class Test {
-             //    psvm + Tab
-             //    sout + Enter
-                 public static void main(String[] args) {
-                     System.out.println("Hello,world!");
-                 }
-             }
-
- -
+- 新建一个 Class 文件， 并命名为 Test
 
 ``` java
 
-    public class Test
-
+        public class Test {
+        //    psvm + Tab
+        //    sout + Enter
+            public static void main(String[] args) {
+                System.out.println("Hello,world!");
+            }
+        }
 ```
 
 

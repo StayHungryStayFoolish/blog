@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "语言基础"
+title:      "Java 语言基础"
 subtitle:   ""
 iframe:     ""
 navcolor:   "invert"
@@ -33,6 +33,7 @@ tags:
 </div>
 
 
+
 该结果是来自Quora(等同于国内的知乎)问答网站和更早的Ubuntu论坛跟帖的4500个开发者的投票。
 
 如何命名一项的选票几乎是其它八项的投票结果的总和。
@@ -41,7 +42,7 @@ tags:
 
 让然可以使用下边链接。
 
-[http://unbug.github.io/codelf/]
+<p>「 Codelf 变量命名  」<a href="http://unbug.github.io/codelf/" target="_blank">「 Codelf 变量命名 」</a></p>
 
 支持直接搜索中文，当你查中文的时候，Codelf 会直接查好单词和单词的近义词给你，
 
