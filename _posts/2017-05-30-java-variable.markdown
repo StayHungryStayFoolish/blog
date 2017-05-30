@@ -164,7 +164,7 @@ tags:
 
 ### 运算符
 
-- 算数运算符
+- 算术运算符
 
         +  运算顺序是从左至右，其他类型与字符串的 + 为字符串拼接
 
@@ -269,4 +269,38 @@ tags:
                  long --> float
 
                  long --> double
+
+### Java 运算优先级
+
+- 非 > 算术 > 关系 > 与 > 或 > 赋值
+
+### Java 程序运行结构
+
+- 顺序结构
+
+- 选择结构(boolean 类型)
+
+    - if 当 true 会执行
+
+    - if () else (if) {} 注意 else 有无区别 if 不为 true 进入 else 执行
+
+    - switch / case 条件选择 Since JDK1.7 支持 String(字符串类型)
+
+- 循环结构
+
+    - for 普通循环
+
+    - for-each 增强循环
+
+    - while
+
+    - do / while
+
+    - 循环结构控制关键词:
+
+        - break 跳出当前循环，入嵌套循环，执行外层
+
+        - continue 跳出本次循环，继续执行
+
+        - return 退出循环
 
