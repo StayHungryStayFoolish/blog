@@ -304,3 +304,41 @@ tags:
 
         - return 退出循环
 
+
+### 例：
+
+- if 语句
+
+        if ( 布尔表达式 ) {
+            //如果布尔表达式为true将执行的语句
+        }
+
+        如果布尔表达式的值为 true，则执行 if 语句中的代码块，否则执行 if 语句块后面的代码
+
+        public class Test {
+            public static void main(String args[]){
+                int x = 10;
+                if( x < 20 ){
+             System.out.print("这是 if 语句");
+              }
+           }
+        }
+
+- if...else语句
+
+        if ( 布尔表达式 ){
+           //如果布尔表达式的值为true
+        }else{
+           //如果布尔表达式的值为false
+        }
+
+        public class Test{
+            public static void main(String args[]){
+                int x = 30;
+                if(x < 20){
+                   System.out.print("这是 if 语句”);
+                }else{
+                   System.out.print("这是 else 语句”);
+                }
+            }
+        }
