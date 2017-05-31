@@ -426,3 +426,30 @@ tags:
  default 在没有 case 语句的值和变量值相等的时候执行。
  **default 分支不需要 break 语句。**
 
+- 例
+
+            public class Test{
+                public static void main(String args[]){
+                    //char grade = args[0].charAt(0);
+                    char grade='C’;
+                    switch(grade){
+                        case'A’:
+                            System.out.println("优秀”);
+                        break;
+                        case'B’:
+                        case'C’:
+                            System.out.println("良好”);
+                        break;
+                        case'D’:
+                            System.out.println("及格”);
+                        case'F’:
+                            System.out.println("你需要再努力努力”);
+                        break;
+                        default:
+                            System.out.println("未知等级”);
+                     }
+                    System.out.println("你的等级是"+grade);
+                }
+            }
+
+- 注意 case 后边的是冒号，执行case 条件句，遇到正确的，break 跳出当前循环，执行 defult 后边语句
