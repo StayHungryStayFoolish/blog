@@ -382,3 +382,30 @@ tags:
         }
 
 - 嵌套的 if…else 语句
+
+        使用嵌套的 if…else 语句是合法的。也就是说你可以在另一个 if 或者
+         else if 语句中使用 if 或者 else if 语句【需要深度理解】。
+
+        嵌套的 if…else 语句语法：
+        if(布尔表达式1){
+          // 如果布尔表达式 1 的值为 true 执行代码
+             if(布尔表达式2){
+          // 如果布尔表达式 2 的值为 true 执行代码
+             }
+        }
+
+- switch 语句
+
+        switch 语句语法：
+
+        switch(expression)
+              {case value:
+              //语句
+              break;
+         //可选case value:
+              //语句
+              break;//可选
+              //你可以有任意数量的case语句
+              default://可选
+              //语句
+        }
