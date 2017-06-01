@@ -1,0 +1,15 @@
+---
+layout:     post
+title:      "Java 核心三大组件"
+subtitle:   "继承、多态、封装"
+iframe:     ""
+navcolor:   "invert"
+date:       2016-10-20
+author:     "Bonismo"
+header-img: "img/java/hello-world-banner.jpg"
+header-mask: 0.3
+tags:
+    - 继承
+    - 多态
+    - 封装
+---
