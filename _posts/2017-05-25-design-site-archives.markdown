@@ -43,7 +43,7 @@ tags:
 ---
 
 <div>
-    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-4.jpeg?raw=true" height="300" width="500" />
+    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-4.jpeg?raw=true" height="300" width="700" />
 </div>
 
 ---
