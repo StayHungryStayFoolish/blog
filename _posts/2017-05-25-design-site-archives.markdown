@@ -4,7 +4,7 @@ title:      "如果没有设计师，世界将没有色彩 —— If the world n
 subtitle:   "设计素材网站归档 - Design site archives"
 date:       2017-05-25 12:00:00
 author:     "Bonismo"
-header-img: "img/post-bg-design-ui.jpg"
+header-img: "img/post-bg-design-ui1.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
@@ -43,7 +43,7 @@ tags:
 ---
 
 <div>
-    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-3.jpg?raw=true" height="300" width="500" />
+    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-4.jpeg?raw=true" height="300" width="500" />
 </div>
 
 ---
