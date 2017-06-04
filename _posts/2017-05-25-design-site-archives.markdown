@@ -142,7 +142,7 @@ tags:
 
 
 <div>
-    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-2.jpeg?raw=true" height="300" width="700" />
+    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-5.jpg?raw=true" height="300" width="700" />
 </div>
 
 
@@ -194,7 +194,7 @@ Logo 位置、大小是否符合当前整个页面的比例、是否突兀、水
 ---
 
 <div>
-    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-1.jpeg?raw=true" height="300" width="700" />
+    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/ui/ui-design-6.jpg?raw=true" height="300" width="700" />
 </div>
 
 
