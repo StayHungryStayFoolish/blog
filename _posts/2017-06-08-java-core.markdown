@@ -21,7 +21,7 @@ tags:
 
 - 封装
 
-### 继承 inheritance
+## 继承 inheritance
 
 - 关键词 extends
 
@@ -45,4 +45,13 @@ tags:
 
     - 必须在构造方法内，第一行注明 super
 
+- 子类显示调用父类构造方法时，必须在其构造方法的第一行注明 super，因为子类实例化创建对象(new subClass)时，必须首先初始化父类的域和方法。
+
+- 判断对象是否是类的实例 instance of
+
+        // 子类 SubClass  父类 SuperClass , 在主方法中执行
+        System.out.println(subClass instance of superClass);
+
 #### 继承在 Java 中是单继承，只存在上下关系，不存在横向关系
+
+
