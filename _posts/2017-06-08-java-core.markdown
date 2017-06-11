@@ -58,7 +58,7 @@ tags:
 
 ## 多态 polymorphism
 
-- 静态多态
+- 静态多态  重载 overload
 
     - 同一个类内部（子父类之间）
 
@@ -74,10 +74,50 @@ tags:
 
     - **类的构造方法都是重载**
 
-- 动态多态
+
+            —— 静态多态
+            public void add ( int x, int y ){
+                System.out.print( x + y);
+            }
+
+            public void add ( int x, double y ){
+                System.out.print( x + y);
+            }
+
+            public boolean add ( boolean a, double b ){
+                return a & b ;
+            }
+
+            public int add ( int a, int b ,int c ){
+                return a + b + c ;
+            }
+
+- 动态多态  重写 overwrite
 
     - 子父类之间
 
     - 子类重写或覆盖父类方法（声明相同，子类可以扩大权限）
 
     - 子类是否调用，在何处调用，根据需求
+
+
+            —— 动态多态
+            public class SuperClass{
+                public void method(){
+                System.out.println( “method is super class ..." );
+                }
+            }
+
+            class SubClass extends SuperClass{
+                public void method(){
+                System.out.println( “method is sub class ..." );
+                }
+            }
+
+            class GrandClass extends SuperClass{
+                public void method(){
+                System.out.println( “method is grand class ..." );
+                }
+            }
+
+            子类继承父类方法，但重写了。
