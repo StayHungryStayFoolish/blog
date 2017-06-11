@@ -1,10 +1,9 @@
 ---
 layout:     post
-title:      "Java 核心三大组件"
+title:      "Java 核心三大组件 -- 继承"
 subtitle:   "继承、多态、封装"
 iframe:     ""
 navcolor:   "invert"
-date:       2016-10-20
 author:     "Bonismo"
 header-img: "img/java/hello-world-banner.jpg"
 header-mask: 0.3
@@ -13,3 +12,37 @@ tags:
     - 多态
     - 封装
 ---
+
+## Java 核心三大组件
+
+- 继承
+
+- 多态
+
+- 封装
+
+### 继承 inheritance
+
+- 关键词 extends
+
+- 结构 子类继承父类 sub class extends super class
+
+- 子类拥有父类的域和方法
+
+    - 父类 private ，不被继承
+
+    - 父类 default ，同包子类可以继承
+
+- 子类可以有自己的域和方法，父类无法调用
+
+##### 关于构造方法
+
+- 父类有无参构造方法时，子类可以隐式调用父类无参构造方法
+
+- 父类没有无参构造方法时
+
+    - 子类必须显示调用父类有参构造方法
+
+    - 必须在构造方法内，第一行注明 super
+
+#### 继承在 Java 中是单继承，只存在上下关系，不存在横向关系
