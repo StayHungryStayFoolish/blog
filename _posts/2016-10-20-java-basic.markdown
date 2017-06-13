@@ -8,6 +8,7 @@ date:       2016-10-20
 author:     "Bonismo"
 header-img: "img/java/hello-world-banner.jpg"
 header-mask: 0.3
+catalog:    true
 tags:
     - 标识符
     - 命名规范

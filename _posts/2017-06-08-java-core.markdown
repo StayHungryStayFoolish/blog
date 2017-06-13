@@ -7,6 +7,7 @@ navcolor:   "invert"
 author:     "Bonismo"
 header-img: "img/java/hello-world-banner.jpg"
 header-mask: 0.3
+catalog:    true
 tags:
     - 继承
     - 多态
@@ -151,3 +152,7 @@ tags:
         - 规范化编程
 
 - 访问限定修饰符
+
+<div>
+    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/java/access.png?raw=true" height="500" width="1250" />
+</div>
