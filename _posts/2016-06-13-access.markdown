@@ -31,14 +31,23 @@ tags:
 
       万物皆对象，你就是一个对象。
 
-      你的女朋友作为你的一个域产生了，私有的，妥妥的。谁也别想动。
+      你的女朋友作为你的一个域产生了，私有的 `private` ，妥妥的。谁也别想动。
 
-      你认识很多朋友，你可以和每个朋友做一番大事业，解决一些问题，于是公共的产生的
+      你认识很多朋友，你可以和每个朋友做一番大事业，解决一些问题，
 
+      于是你的能力产生了，公共的 `public` 。
 
+      你挣钱了，你的儿子可以继承你的，你也可以继承你父母的，但是你不能继承你儿子的，
 
+      你父母也不能继承你的，这就是继承关系，只存在上下。且是单向的，因为辈分不能乱嘛。
 
+-----
 
+#### 域通常是私有的 private
+
+#### 方法是公共的 public
+
+## 具体权限
 
 <div>
     <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/java/access.png?raw=true" height="500" width="1250" />
