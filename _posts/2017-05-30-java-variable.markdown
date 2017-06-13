@@ -3,6 +3,7 @@ layout:     post
 title:      "Java 数据类型、变量"
 subtitle:   ""
 author:     "Bonismo"
+date:       2017-05-30
 header-img: "img/java/hello-world-banner.jpg"
 header-mask: 0.3
 catalog:    true
