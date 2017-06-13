@@ -153,6 +153,17 @@ tags:
 
 - 访问限定修饰符
 
+
 <div>
     <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/java/access.png?raw=true" height="500" width="1250" />
 </div>
+
+- 访问权限控制在继承中：
+
+    - 父类中声明的 public 方法，子类必须是 public。
+
+    - 父类中声明的 protected 方法，子类可以是 public，也可以是 protected，但不能声明为 private。
+
+    - 父类中声明的 private 方法，不能被继承。
+
+    - 局部变量不能使用访问限制修饰符 [ 局部变量只作用在方法内，方法块内，构造方法内 ]
