@@ -119,3 +119,27 @@ Static `static 修饰变量属于 静态变量 也叫 类变量(类初始化时�
 
 - abstract 类，不是不可以实例化，而是不能直接被实例化。`因为要实现抽象方法，new 出来的对象不能实现抽象方法`。但可以用匿名类来实例化。
 
+- 匿名类实例化抽象类
+
+        // anonymous  /ə’nɒnɪməs/ 匿名
+        public class AnonymousInner {
+            public static void main(String[] args) {
+                SuperClass superClass = new SuperClass() {
+                    @Override
+                    void method() {
+                    System.out.print("抽象类实例化");
+                    }
+                }; // 注意这个冒号，没有会报错。;表示分割。
+                superClass.method();
+            }
+        }
+
+        abstract class SuperClass{
+            abstract void  method();
+        }
+
+        输出结果：
+        抽象类实例化
+
+
+
