@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Java 访问限定修饰符 "
-subtitle:   ""
+subtitle:   "拒绝共享"
 iframe:     ""
 navcolor:   "invert"
 author:     "Bonismo"
@@ -10,10 +10,40 @@ header-img: "img/java/hello-world-banner.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
-    - 继承
-    - 多态
-    - 封装
+    - 修饰类
+    - 修饰方法
+    -
 ---
+
+## 什么是访问限定修饰符？
+
+    - 比如你，有一个女朋友，还有一些朋友，我就是你其中一个好基友。我们关系很好，
+
+      可是你的女朋友是属于你自己的，她不是我的。但是呀，你的朋友或许会变成我的朋友。
+
+      你还有父母，还会有后代。
+
+      这些都是你自己的，你不会给我，我也不要，我唯一要的就是你的女朋友。
+
+      可这个时候，你用 private （私有的） 来修饰了，加了限定，别人都接触不到了。
+
+      于是访问限定修饰符就有了，继承也有了。
+
+      万物皆对象，你就是一个对象。
+
+      你的女朋友作为你的一个域产生了，私有的，妥妥的。谁也别想动。
+
+      你认识很多朋友，你可以和每个朋友做一番大事业，解决一些问题，于是公共的产生的
+
+
+
+
+
+
+<div>
+    <img src="https://github.com/StayHungryStayFoolish/stayhungrystayfoolish.github.io/blob/master/img/java/access.png?raw=true" height="500" width="1250" />
+</div>
+
 
 - 简单总结
 
