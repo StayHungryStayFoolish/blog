@@ -57,3 +57,46 @@ tags:
 - 域具有默认值。如果不赋值，则 数值型默认值为 0，布尔默认值为 false,引用型为 null。
 
 #### 例：
+
+        public class Employee {
+            // 这个实例变量对子类可见
+            public String name;
+            // 私有变量，仅在该类可见，用来隐藏实现细节，保护数据
+            private double salary;
+            // 在构造器中对name赋值，并重新定义了形参
+            public Employee (String empName){
+                name = empName;
+            }
+            // 设定salary的值，并重新定义了形参
+            public void setSalary(double empSal){
+                salary = empSal;
+            }
+            // 方法块，打印信息  ，方法功能调用入口  [‘sæləri] 薪水，加薪
+            public void printEmp(){
+                System.out.println("名字 : " + name );
+                System.out.println("薪水 : " + salary);
+            }
+            // 程序入口
+            public static void main(String args[]){
+                // 输出方法块，首先要构造器必须用 new 来实现，并传参
+                Employee empOne = new Employee("RUNOOB");
+                // 调用 set 方法 ，private 修饰的变量，只能在所在类的外部 用 set 获得
+                empOne.setSalary(1000);
+                // 已经 new 新对象，所有可以调用方法块，输出
+                empOne.printEmp();
+            }
+        }
+
+        运行结果：
+        名字 : RUNOOB
+        薪水 : 1000.0
+
+### 静态变量
+
+ - 静态变量被该类所有对象共有，属于类的，
+
+ - 不需要实例化就可以直接调用。可以在静态方法中调用，
+
+ - 也可以在普通方法中被调用，但静态方法中不能存在实例变量，也不能调用实例方法。
+
+ - 普通方法中可以调用静态变量、静态方法。
