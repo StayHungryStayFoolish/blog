@@ -1,15 +1,39 @@
 ---
 layout:     post
-title:      "Demo8"
+title:      "Java 变量作用范围"
 subtitle:   ""
-date:       2015-09-22
+iframe:     ""
+navcolor:   "invert"
+date:       2017-05-30
 author:     "Bonismo"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/java/hello-world-banner.jpg"
+header-mask: 0.3
+catalog:    true
 tags:
-    -
-    -
-    -
+    - 域
+    - 静态变量
+    - 成员变量
 ---
 
+### Java 变量类型
+
+- 域 也叫成员变量，属于某个对象的属性，必须创建实例对象，才会被 JVM 分配空间，这个实例变量才可以被使用。
+
+- 静态变量是类级别变量[
+
+- 局部变量 是方法内的变量
 
 
+### 所有变量在使用前都必须声明
+
+        int a, b, c; // 声明三个 int 型整数：a,b,c
+
+        int d = 3, e = 4 ,f = 5; // 声明三个整数，并赋予初值
+
+        byte g = 22 ; // 声明并初始化 g
+
+        String s = “monaco” ; // 声明并初始化字符串 s
+
+        double pi = 3.1314 // 声明双精度浮点型
+
+        char x = ‘x’ ; // 声明变量 x 的值是字符 ‘x’ ，注意是 单引号 ‘’ char 字符类型只能在单引号内放一个字母、汉字
