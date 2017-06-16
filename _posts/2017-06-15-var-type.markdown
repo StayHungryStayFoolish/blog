@@ -151,6 +151,26 @@ tags:
 
 - 局部变量只声明，不能使用，必须在使用之前进行赋值。
 
-- 局部变量必须赋值，否则不能使用。没有默认初始化值。
+- 局部变量必须赋值，否则不能使用。`没有默认初始化值`。
 
 - 只作用在所属区域，即 { } 内。
+
+- 例：
+
+        public class Test{
+            public void dogAge(){
+            // 局部变量必须赋值，不能初始化
+            int age = 0;
+             age = age + 7;
+             System.out.println(“小狗年龄是：” + age)
+            }
+
+            public static void mani(String []args){
+            Test test = new Test();
+             test.dogAge();
+            }
+        }
+
+        如果局部变量初始化， int age;  age = age + 7; 会提示运行错误
+        Test.java:4:variable number might not have been initialized
+        age = age + 7;
