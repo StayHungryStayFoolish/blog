@@ -100,3 +100,47 @@ tags:
  - 也可以在普通方法中被调用，但静态方法中不能存在实例变量，也不能调用实例方法。
 
  - 普通方法中可以调用静态变量、静态方法。
+
+ 静态方法调用：类名.静态方法名
+
+ - 静态变量也成为类级别变量，必须在构造方法`构造函数]`语句块`非构造函数、普通方法`之外
+
+ - 静态变量在类加载时创建，只有一份拷贝 copy ，分配空间，程序结束时释放。便随类。
+
+ - 默认值跟实例变量相似。数值型变量默认是 0，布尔型默认是 false,引用型默认是 null。
+   静态变量值可以在声明时知道，也可以在构造方法知道，也可以在静态语句块中初始化。
+
+- 例：
+
+        // 简单方式：
+        public class Employee{
+            //salary 是静态的私有变量
+            private static double salary;
+            //DEPARTMENT 是一个常量
+            public static final String DEPARTMENT = "开发人员”;
+            // 程序入口
+            public static void main(Stringargs[]){
+            // 直接程序入口，设置静态私有变量（不再需要在类中，构造 set方法，然后还要有 方法块输出，然后在程序入口，new 实例，再调用）
+            salary = 10000;
+            System.out.println(DEPARTMENT +  "平均工资:” + salary);
+            }
+        }
+
+
+        // 复杂方式：
+        public class Emplovee1{
+            // 静态变量未赋值
+            private static double salary;
+            public static void setSalary(double salary1){
+                salary = salary1;
+            }
+            void s(){
+                System.out.println(" " + salary);
+            }
+            public static void main(String []args){
+                // 必须 new 实例化，才可以给静态变量传值
+                Emplovee1 emplovee1 = new Emplovee1();
+                emplovee1.setSalary(1000);
+                emplovee1.s();
+            }
+        }
