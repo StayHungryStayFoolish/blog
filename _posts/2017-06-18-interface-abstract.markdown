@@ -159,3 +159,22 @@ tags:
 - 抽象类是用来捕捉子类的通用特性的。不能被实例化，只能被子类继承。
 
 - 特殊情况，抽象类可以被匿名内部类实例化。
+
+- 特殊情况：
+
+
+        public class AnonymousInner {
+            public static void main(String[] args) {
+                // 继承关系，匿名内部类 实例化 抽象类
+                SuperClass superClass = new SuperClass() {
+                    @Override
+                    void method() {
+                        System.out.print("抽象类实例化");            }
+                }; // 一定要有分号，否则会报错
+            }
+        }
+
+        abstract class SuperClass{
+            abstract void  method();
+        }
+
