@@ -117,3 +117,31 @@ tags:
     2.然后 标准类 C extends 抽象 B，实现 B的方法`抽象B默认拥有接口A的 a3,a4 两种抽象方法`，拥有了接口A的 a3,a4方法。
 
     抽象类B 对接口A而言，a3,a4的方法是继承关系。
+
+- 例：
+
+        // 接口A
+        public interface InterfaceDemo {
+            int I = 100;
+            void add();
+            void m();
+            void n();
+        }
+        // 抽象类B实现接口A的一个标准类C不需要的方法,接口拿过来的方法属于继承关系
+        abstract class InterfaceTest implements InterfaceDemo {
+            @Override
+            public void add() {
+
+            }
+
+        // 标准类C继承抽象类B，从而间接实现接口A的一些方法 [ 只实现自己需要的方法 ]
+        class InterDemo extends InterfaceTest{
+            @Override
+            public void m() {
+
+            }
+            @Override
+             public void n() {
+
+            }
+        }
