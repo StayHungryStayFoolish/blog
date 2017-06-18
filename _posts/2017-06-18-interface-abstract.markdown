@@ -56,3 +56,45 @@ tags:
 - 接口是用来被实现的，`implements` 关键字，表示该 类 要遵循该接口。实现该接口的所有抽象方法。
 
 - 接口是抽象类的延伸，Java 为了保证数据的安全性，规定类不能多重继承。但接口弥补了抽象类不支持多继承的缺陷。
+
+- 接口与抽象的不同点
+
+    - 接口可以多继承，抽象类只能单继承
+
+    - 接口只能存在 常量 ，抽象类 可以存在 普通域。
+
+    - 接口的方法必须是抽象方法，抽象类可以有抽象方法，也可以含有非抽象方法 `甚至只有非抽象方法，但失去了意义`。
+
+    - 接口是用来被实现的 关键词 implements 并实现其所有抽象方法，抽象类是用来被继承的，由子类实现其所有抽象方法 关键词 extends。
+
+
+### 接口的继承过程
+
+- 例
+
+        public interface InterfaceDemo {
+            int I = 100;
+            void add();
+            void m();
+            void n();
+        }
+
+        class InterfaceClass implements InterfaceDemo{
+            @Override
+            public void add() {
+
+            }
+
+            @Override
+            public void m() {
+
+            }
+
+            @Override
+            public void n() {
+
+            }
+        }
+
+### 场景模拟
+
