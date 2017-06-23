@@ -208,3 +208,16 @@ tags:
 
       不能被输出，方法被调用 System.out.println(); 才会输出
 
+- 成员变量，静态变量实例：
+
+        public class TestPeople {
+             public String name; //成员变量 ---- 初始化
+            public String name = “张三”; // 成员变量 ---- 显示初始化
+            private int age;//私有成员变量
+            public static String sex="男"; //静态变量
+            private static final String BIRTHDAY="xx月xx日"; //常量
+        }
+
+        注：静态变量可以用过 类的名字调用：
+        语句语法： Class_name.variable_name
+        TestPeople.sex
