@@ -221,3 +221,54 @@ tags:
         注：静态变量可以用过 类的名字调用：
         语句语法： Class_name.variable_name
         TestPeople.sex
+
+### 局部变量覆盖同名域
+
+- 当局部变量声明和域的名字一样时，局部变量会覆盖域。`就近原则` 但Java 语言规范不建议这么做。
+
+        public class VariableTest {
+            int i = 1;
+            public void method(){
+                int i = 5;
+                System.out.println("方法内 i 的值：" + i);
+            }
+
+            public static void main(String[] args) {
+                VariableTest variableTest = new VariableTest();
+                // 调用类的成员方法
+                variableTest.method();
+               // 输出类的域
+                System.out.println( “主方法内 i 的值：" + variableTest.i);
+
+            }
+        }
+
+        运行结果：
+
+        方法内 i 的值：5   // 覆盖了域的值，就近原则
+        主方法内 i 的值：1
+
+- 当局部变量声明和域的名字一样时，局部变量会覆盖域。但如果想在成员方法内，调用 域 时，用 this 指代当前类，来调用。
+
+        public class VariableTest {
+            int i = 1;
+            public void method(){
+                int i = 5; // i 没有调用
+               // 用 this 来指代当前类的域，进行调用
+                System.out.println("方法内 i 的值：" + this.i);
+            }
+
+            public static void main(String[] args) {
+                VariableTest variableTest = new VariableTest();
+                // 调用类的成员方法
+                variableTest.method();
+               // 输出类的域
+                System.out.println( “主方法内 i 的值：" + variableTest.i);
+
+            }
+        }
+
+        运行结果：
+
+        方法内 i 的值：1 —— 域的值
+        主方法内 i 的值：1
