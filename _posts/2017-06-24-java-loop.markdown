@@ -31,5 +31,33 @@ tags:
 </div>
 
 
-###
+### 嵌套 for 循环
+
+- 例：
+
+      public class Test2{
+          public static void main(String args[]){
+              for (int i = 1; i <= 3; i++){
+                  for (int n = 1; n <= 3; n++){
+                      //输出结果。。。。
+                      System.out.println("i = " + i + ", n = " + n);
+                  }
+              }
+          }
+      }
+      输出结果： i赋值一次，n循环一次。i赋值第二次，n再循环一次。
+      i = 1, n = 1
+      i = 1, n = 2
+      i = 1, n = 3
+      i = 2, n = 1
+      i = 2, n = 2
+      i = 2, n = 3
+      i = 3, n = 1
+      i = 3, n = 2
+      i = 3, n = 3
+
+      第一个 for ：定一个整型变量 i, 它的初始值是 1；判断 i 是否小于等于 3；如果成立, i 就自增 1。
+      第二个 for ：定一个整型变量 n, 它的初始值是 1；判断 n 是否小于等于 3；如果成立, n 就自增 1。
+
+
 
