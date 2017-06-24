@@ -1,0 +1,26 @@
+---
+layout:     post
+title:      "Java 循环控制"
+subtitle:   "loop"
+iframe:     ""
+navcolor:   "invert"
+author:     "Bonismo"
+date:       2017-06-13
+header-img: "img/java/hello-world-banner.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - return
+    - break
+    - continue
+---
+
+## Java 常见循环控制关键词
+
+- return 返回
+
+- break 退出
+
+- continue 继续
+
+
