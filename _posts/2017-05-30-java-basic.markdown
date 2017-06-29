@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Java 语言基础"
-subtitle:   ""
+subtitle:   "入门知识"
 iframe:     ""
 navcolor:   "invert"
 date:       2017-05-30

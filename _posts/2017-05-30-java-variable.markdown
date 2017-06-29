@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Java 数据类型、变量"
-subtitle:   ""
+subtitle:   "基础知识"
 author:     "Bonismo"
 date:       2017-05-30
 header-img: "img/java/hello-world-banner.jpg"

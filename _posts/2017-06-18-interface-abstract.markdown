@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Java 接口比抽象更抽象"
-subtitle:   ""
+subtitle:   "Interface"
 iframe:     ""
 navcolor:   "invert"
 date:       2017-06-18
