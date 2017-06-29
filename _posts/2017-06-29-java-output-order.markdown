@@ -197,3 +197,53 @@ tags:
         Z static value
         static value  --- 最后输出是因为在 父类 static 块里，但是没有调用。所以在程序入口，按照输出先后顺序输出， z 先输出，再输出 xVar ,xVar 被重新赋值
 
+        class X{
+            static String xVar = "x static value";
+            static {
+                System.out.println(xVar);
+                System.out.println("X static block");
+                xVar = "static value";
+        // 输出的是 "static value",而不是"x static value"
+                //System.out.println(xVar);
+        }
+            public X() {
+                System.out.println("X 类无参构造");
+            }
+        }
+        class Y{
+            String yVar = "Y normal value";
+            public Y() {
+                System.out.println("Y 类无参构造");
+            }
+            void show(){
+                System.out.println(yVar);
+            }
+        }
+        public class Z extends X {
+            static String z = "Z static value";
+            static {
+                System.out.println("Z static block");
+            }
+            public Z() {
+                System.out.println("Z 类无参构造");
+            }
+            Y y;
+            {
+                y = new Y();
+                y.show();
+            }
+            public static void main(String[] args) {
+                System.out.println(new Z().xVar);
+            }
+        }
+
+        运行结果：  为什么Y的输出一直在Z的前边？ 因为这里的 Y 是 代码块 {} ，不是class Y  注意输出顺序
+        x static value
+        X static block
+        Z static block
+        X 类无参构造
+        Y 类无参构造
+        Y normal value
+        Z 类无参构造
+        static value
+
