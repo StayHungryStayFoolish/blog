@@ -113,3 +113,61 @@ ints = {1,2,3,4,5};
 
 - 可以使用 Array.get(); Array.set(); 方法访问数组，设置数组。
 
+        public class ArrayReflect {
+            public static void main(String[] args) {
+                // 注意定义数组的方式  因为是反射机制，所以要定义 一个实例，实例的参数是一个关于 class 的数据类型。要有强转 (Parameter_Type)
+                int[] intArray = (int[]) Array.newInstance(int.class, 3);
+                Array.set(intArray, 0, 123);
+                Array.set(intArray, 1, 456);
+                Array.set(intArray, 2, 789);
+                System.out.println("intArray[0] = " + Array.get(intArray, 0));
+                System.out.println("intArray[1] = " + Array.get(intArray, 1));
+                System.out.println("intArray[2] = " + Array.get(intArray, 2));    }
+        }
+
+        输出：
+        intArray[0] = 123
+        intArray[1] = 456
+        intArray[2] = 789
+
+### 数组简单方法实例
+
+
+
+        public class ArrayDemmo{
+            // 数组类型
+            Integer[] intArray = {1,2,3,4,5};
+            String[] strings = {“a”,”b”,”c”,”d”};
+            // Arrays.toString 返回指定数组内容的字符串表达形式
+            // 直接迭代，输出 形式
+            String intArrayString = Arrays.toString(intArray);
+            String intArrayString1 = Arrays.toString(strings);
+            // 检查数组中，是否包含某一个元素
+            boolean b = Arrays.asList(strings).contains(“a”);
+            boolean b1 = Arrays.asList(intArray).contains(1);
+
+            // 复制数组，从 intAarry 数组复制 2 个元素
+            Integer[] integer1 = Arrays.copyOf(intArray,2);
+            //  复制数组，从 intAarry 数组 指定位置 2复制 到 结束位置 5
+            Integer[] integer2 = Arrays.copyOfRange(intArray,2,5);
+            // Arrays.toString 返回指定数组内容的字符串表达形式 ,输出
+            String integers3 = Arrays.toString(integers1);
+            String integers4 = Arrays.toString(integers2);
+
+            // 方法块,输出检测内容 true , false
+            void method(){
+                System.out.println(b);
+                System.out.println(b1);
+            }
+            public static void main(String[] args){
+                // 实例化，调用方法
+                ArrayDemo arrayDemo = new ArrayDemo();
+                System.out.println(arrayDemo.intArrayString);
+                System.out.println(arrayDemo.intArrayString1);
+                // 输出方法块语句
+                arrayDemo.method();
+                // 输出复制数组
+               System.out.println(arrayDemo.integers3);
+               System.out.println(arrayDemo.integers4);
+            }
+        }
