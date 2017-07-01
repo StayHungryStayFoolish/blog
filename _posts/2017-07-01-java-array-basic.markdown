@@ -67,3 +67,49 @@ ints = {1,2,3,4,5};
 
     int[ ] arr = new int`[` 3 `]`;
     System.out.println(arr.getClass());
+
+### 打印数组
+
+- Arrays.toString(arr);
+
+- Arrays.deepToString(arr);
+
+    deepToString(); 更适合打印多维数组
+
+        String[][] b = new String[3][4];
+              for (int i = 0; i < 3; i++){
+                  for (int j = 0; j < 4; j++){
+                      b[i][j] = "A" + j;
+                      }
+                  }
+                  System.out.println(Arrays.toString(b));
+                  //输出[[Ljava.lang.String;@55e6cb2a, [Ljava.lang.String;@23245e75, [Ljava.lang.String;@28b56559]
+
+                  System.out.println(Arrays.deepToString(b));
+                  //输出[[A0, A1, A2, A3], [A0, A1, A2, A3], [A0, A1, A2, A3]]
+
+
+- 数组输出形式
+
+        class Demo{
+            public static void main(String[] args) {
+                int[] intArray = {1, 2, 3, 4, 5, 6};
+                String intArrayString = Arrays.toString(intArray);
+
+                System.out.println(intArray); // 输出的是一个 String 类型的 Hex 码
+                System.out.println(intArrayString); // 输出的是一个 String 类型
+            }
+        }
+
+        结果：
+        [I@511d50c0
+        [1, 2, 3, 4, 5, 6]
+
+### 通过反射机制访问数组元素
+
+- 反射机制 是通过 java.lang.reflect.Array 这个类来处理数组。
+
+    reflect /rɪ'flekt/ 反射、反映
+
+- 可以使用 Array.get(); Array.set(); 方法访问数组，设置数组。
+
