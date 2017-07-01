@@ -60,4 +60,23 @@ tags:
       第二个 for ：定一个整型变量 n, 它的初始值是 1；判断 n 是否小于等于 3；如果成立, n 就自增 1。
 
 
+### 9*9 表格
+
+        public class Test1{
+            public static void main(String[] args) {
+                // 静态方法输出格式
+                Test1.print99();
+            }
+
+            // 打印9*9的乘法表格
+            public static void print99() {
+                for (int i = 1; i <= 9; i++) {
+                    for (int j = 1; j <= i ; j++){
+                        System.out.print(i +"*"+ j +"="+ i*j +"\t");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+
 
