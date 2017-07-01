@@ -132,7 +132,19 @@ ints = {1,2,3,4,5};
 
 ### 数组简单方法实例
 
+- 检测是否包含某一个元素
 
+    boolean b = Arrays.asList(数组名字).contains(元素);
+
+- 复制一个数组的元素，从数组起始位置复制
+
+    数组类型[ ] 数组名字2 = Arrays.copyOf(数组名字1, 复制的长度);
+
+- 复制一个数组的元素，从指定位置复制
+
+    数组类型[ ] 数组名字2 = Arrays
+
+    .copyOfRange(数组名字1, 指定位置，结束位置);
 
         public class ArrayDemmo{
             // 数组类型
