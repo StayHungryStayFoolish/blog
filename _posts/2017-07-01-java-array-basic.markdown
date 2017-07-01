@@ -183,3 +183,20 @@ ints = {1,2,3,4,5};
                System.out.println(arrayDemo.integers4);
             }
         }
+
+- `注：更多方法参考 API 文档 java.lang.util.Arrays`
+
+     - 建议掌握的方法
+
+        - asList()
+
+        - copyOf()
+
+        - copyOfRange()
+
+        - sort()
+
+        - toString()
+
+### 二位数组
+
