@@ -22,3 +22,48 @@ tags:
 - 数组是静态的
 
 - 数组的声明、初始化、创建是一个整体过程
+
+- 数组具有索引（下标）index
+
+- 数组是有长度的，length，推荐循环时，使用 length，不会出现下标越界
+
+- 数组需要遍历
+
+    - 循环来输出 for for-each 循环
+
+- 一维数组、二维数组、多维数组
+
+### 数组的定义方式
+
+- 动态定义 String[ ] aArray = new String`[` 5 `]`;
+
+- 静态定义 String[ ] bArray = {"a","b","c","d","e"}
+
+- 静态定义 String[ ] cArray = new String[ ]{"a","b","c”,"d","e”}
+
+
+        第一种定义了一个数组，并指定了数组的长度，属于动态定义。
+
+        第二种和第三种在分配内存空间的同时，还初始化了值。
+
+- 数组声明，创建，初始化必须都放在一条语句中，分开会出现语法错误。
+
+- 典型错误：
+
+int[ ] ints;
+
+ints = {1,2,3,4,5};
+语句分开，直接报错。
+
+- 特殊情况
+
+    二维、多维数组，只定义 行 就可以，不会报错。
+
+    int[ ][ ] a = new int`[`3`]`[ ];
+    System.but.println(a.length); // 3
+
+    int[ ][ ] b = new int`[`3`]` `[`5`]`;
+    System.out.println(b.length); // 3
+
+    int[ ] arr = new int`[` 3 `]`;
+    System.out.println(arr.getClass());
