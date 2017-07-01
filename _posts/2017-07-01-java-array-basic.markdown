@@ -272,3 +272,34 @@ ints = {1,2,3,4,5};
 ### 多维数组输出
 
 
+        int[][][][][] ints1 = new int[3][2][3][4][5];
+         for (int i = 0; i < ints1.length; i++) {
+            for (int j = 0; j < ints1[i].length; j++) {
+                for (int k = 0; k < ints1[i][j].length; k++) {
+                    for (int l = 0; l < ints1[i][j][k].length; l++) {
+                        for (int m = 0; m < ints1[i][j][k][l].length; m++) {
+                            ints1[i][j][k][l][m] = i + j + k + l + m ;
+                            System.out.print(ints1[i][j][k][l][m] + “\t");
+                            }
+                        System.out.println("--");            }
+                }
+            }
+        }
+
+
+### 游戏棋盘输出
+
+        public class CheseboardGame {
+            private static final char[] COLORS = {'红','黑','白','绿','黄','灰'};
+            public static void main(String[] args) {
+                char[][] square = new char[10][10];
+                for (int i = 0; i < square.length; i++) {
+                    for (int j = 0; j < square[i].length; j++) {
+                        square[i][j] = COLORS[(int) (Math.random()*6)];
+                        System.out.print(square[i][j] +"\t");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+
