@@ -223,3 +223,52 @@ ints = {1,2,3,4,5};
          arrayName = new type`[`arrayLength1`] [`arrayLength2`]`;
 
          int a[ ] [ ] = new int `[`2`][`3`]`;
+
+    - 例：
+
+            public class TwoArray1 {
+                public static void main(String args[]) {
+                    int a[][] = {{1,2},{3,4,5,6},{7,8,9}} ;
+                    for(int i=0 ; i <a.length ; i++) {
+                        for(int j=0 ; j<a[i].length ; j++) {
+                            System.out.println("a[" + i + "][" + j + "]=" + a[i][j]);
+
+                        }
+                    }
+                    //定义二维数组
+                    int[ ] [ ] arr = {{1,2,3},{4,5,6,7,8},{9,10,11
+            }};
+
+                    //静态初始化
+                    //打印出二维数组
+                    // i 的长度 是数组个数的长度，为3， j 的长度是数组内的长度
+                    for(int i = 0;i < arr.length;i++)
+            {
+                        for(int j = 0;j < arr[i].length;j++){
+                            System.out.print(arr[i][j]+" ");
+
+                        }
+                        // 输出一列后就回车空格
+                        System.out.println()
+            ;
+
+                    }
+                }
+            }
+            运行结果：
+            a[0][0]=1
+            a[0][1]=2
+            a[1][0]=3
+            a[1][1]=4
+            a[1][2]=5
+            a[1][3]=6
+            a[2][0]=7
+            a[2][1]=8
+            a[2][2]=9
+            1 2 3
+            4 5 6 7 8
+            9 10 11
+
+### 多维数组输出
+
+
