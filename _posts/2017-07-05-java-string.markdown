@@ -21,6 +21,10 @@ tags:
 
       implements Serializable, Comparable<String>, CharSequence
 
+- 内部结构
+
+    - 字符数组构成的
+
 - 特性
 
     - 初始化后，其值不能改变
@@ -95,5 +99,25 @@ tags:
 
 - valueOf() 返回 String 类型
 
+
+### StringBuffer、StringBuilder
+
+- 字符缓冲区，初始容量16个字符
+
+- 可以使用 append、insert、delete、deleteCharAt、reverse 等方法改变长度、内容
+
+### 三者区别
+
+- 效率
+
+    - String 最慢，但是稳定，每次都会生成一个新的对象
+
+    - StringBuffer 快，相对稳定，不会生成新的对象，只是追加，改变。
+
+        - 保证同步，多线程安全。
+
+    - StringBuilder 最快，稳定。同 StringBuffer.
+
+        - 不是同步的，多线程不安全。
 
 
