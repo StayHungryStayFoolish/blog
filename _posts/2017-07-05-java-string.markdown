@@ -71,29 +71,29 @@ tags:
 
 - length() 返回字符串长度
 
-- matches
+- matches() 是否匹配给定正则表达式
 
-- replace
+- replace() 替换字符串
 
-- replaceAll
+- replaceAll() 使用正则替换匹配的字符串
 
-- replaceFirst
+- replaceFirst 使用正则替换匹配的第一个字符串
 
-- split
+- split() 使用正则拆分
 
-- startWith
+- startWith 是否以...前缀开始
 
-- subString
+- subString() 根据给定索引起始，返回一个新的字符串
 
-- toCharArray
+- toCharArray() 转换为一个新的字符数组
 
-- toLowerCase
+- toLowerCase() 转换为小写
 
-- toUpperCase
+- toUpperCase() 转换为大写
 
-- trim
+- trim() 裁剪首尾的空白
 
-- valueOf
+- valueOf() 返回 String 类型
 
 
 
