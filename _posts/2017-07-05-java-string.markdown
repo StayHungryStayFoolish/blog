@@ -110,14 +110,23 @@ tags:
 
 - 效率
 
-    - String 最慢，但是稳定，每次都会生成一个新的对象
+    - String 最慢，但是稳定
 
-    - StringBuffer 快，相对稳定，不会生成新的对象，只是追加，改变。
+    - StringBuffer 快，相对稳定
 
         - 保证同步，多线程安全。
 
-    - StringBuilder 最快，稳定。同 StringBuffer.
+    - StringBuilder 最快，稳定
 
         - 不是同步的，多线程不安全。
 
 
+- 值变化
+
+    - String 初始化之后，不可改变。
+
+        - 因为在 字符串池中创建了一个对象。当又建一个值时，JVM 会先去池中，找是否有已经存在的，如果没有，会再创建一个对象。之前的将会一直存在。
+
+        - 所以 String 的值不会被改变，是因为再创建一个，只是指向发生改变，其值还存在。
+
+    - StringBuffer、StringBuilder 值会发生变化
