@@ -61,7 +61,39 @@ tags:
 
 - format() 指定格式/语言环境返回格式化的字符串
 
--
+- getBytes() 将字符集编码为 byte 序列，存储到 byte 数组中
+
+- indexOf() 返回指定字符串在此字符串中第一次出现的索引，不存在返回 -1
+
+- isEmpty() 当 length() 为0时，返回 true
+
+- lastIndexOf() 返回指定字符串出现的最后一次索引
+
+- length() 返回字符串长度
+
+- matches
+
+- replace
+
+- replaceAll
+
+- replaceFirst
+
+- split
+
+- startWith
+
+- subString
+
+- toCharArray
+
+- toLowerCase
+
+- toUpperCase
+
+- trim
+
+- valueOf
 
 
 
