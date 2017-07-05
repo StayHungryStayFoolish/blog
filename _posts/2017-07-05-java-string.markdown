@@ -45,7 +45,23 @@ tags:
 
     - .eg
 
+### 常用方法
 
+- charAt() 指定索引处的 chat 值
+
+- concat() 在字符串末尾拼接
+
+- contains() 是否包含
+
+- endsWith() 是否以...结尾
+
+- equals() 是否相等 （重要）
+
+- equalsIgnoreCast() 忽略大小写比较
+
+- format() 指定格式/语言环境返回格式化的字符串
+
+-
 
 
 
