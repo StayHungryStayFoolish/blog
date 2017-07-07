@@ -5,12 +5,13 @@ subtitle:   "比较特殊的类"
 iframe:     ""
 navcolor:   "invert"
 author:     "Bonismo"
-date:       2017-06-24
+date:       2017-07-05
 header-img: "img/java/hello-world-banner.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
     - 值不能发生改变
+    - 缓冲
 ---
 
 ## String 字符串
