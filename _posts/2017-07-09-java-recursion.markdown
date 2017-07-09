@@ -39,7 +39,6 @@ tags:
 
 - 例：
 
-
         public class Prime {
             public void get(int n) {
                 for (int i = 2; i < n + 1; i++) {
@@ -60,10 +59,45 @@ tags:
                 // 100 = 2*2*5*5
                 // 1000 = 2*2*2*5*5*5
                // Ctrl + Alt + T
-                E4 e4 = new E4();
+                Prime prime = new Prime();
                 int n = 10000;
                 System.out.print(n + " = ");
-                e4.get(n);
+                prime.get(n);
              }
         }
 
+-
+  将一个正整数分解质因数。例如：输入90，打印出90=2*3*3*5。
+  假设 n == 90，
+  当 n 进入循环时，
+  先进行条件，当 n % i == 0，进行判断，
+  n 是否等于 i ，如果 n == i，则证明不能再分解，直接输出
+  n 不等于 i ，进入 else，输出刚才的 i ，继续调用 get( n / i ) 方法
+  然后 break 跳出循环。
+  n 再次进入for 循环 , 注意：此时的 n 是 get( n / i) 后的 值
+  然后继续判断，直到 n == i ，输出最后一个质因数。
+
+### 求1+2!+3!+…+20!的和
+
+- 例：
+
+            public class Factorial {
+                long sum;
+                public long factorial (long n){
+                    if (n == 1) {
+                        return 1;
+                        } else {
+                        return n* factorial(n - 1); // 阶乘
+                    }
+                }
+                public void getSum(){
+                    for (int i = 1; i < 21; i++) {
+                        sum += factorial(i);
+                    }
+                    System.out.println(sum);
+                }
+                public static void main(String[] args) {
+                    Factorial factorial = new Factorial();
+                    factorial.getSum();
+                }
+            }
