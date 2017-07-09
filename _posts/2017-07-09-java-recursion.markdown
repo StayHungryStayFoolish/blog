@@ -40,5 +40,30 @@ tags:
 - 例：
 
 
+        public class Prime {
+            public void get(int n) {
+                for (int i = 2; i < n + 1; i++) {
+                    if (n % i == 0) {
+                        if (i == n) {
+                            System.out.print(i);
+                            } else {
+                            System.out.print(i + " * ");
+                            get(n / i); // 递归算法
+                       }
+                        break;
+                     }
+                }
+            }
 
+            public static void main(String[] args) {
+                // 10 = 2*5
+                // 100 = 2*2*5*5
+                // 1000 = 2*2*2*5*5*5
+               // Ctrl + Alt + T
+                E4 e4 = new E4();
+                int n = 10000;
+                System.out.print(n + " = ");
+                e4.get(n);
+             }
+        }
 
