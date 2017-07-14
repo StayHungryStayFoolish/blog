@@ -17,7 +17,7 @@ tags:
 
 - List 是一个`接口`,继承于 Collection 的接口
 
-- 有序队列
+- 有序队列 `index`
 
     - 次序是 List 最主要的特点
 
@@ -126,14 +126,31 @@ tags:
 
     - remove()
 
+    - removeAll()
+
     - size()
 
     - toArray() `返回此集合中所有元素的数组`
 
         - 无参使用 Object 接收返回值
 
-        - 有参使用参数类型接收返回值
+        - 有参使用参数类型接收返回值 `集合和数组之间转换桥梁`
 
+- List 扩展后
+
+    - get(int index)
+
+    - indexOf() 返回第一次出现指定元素索引，无返回 -1
+
+    - lastIndexOf() 同上，相反
+
+    - remove(int index) 移除一定索引，`返回移除元素`
+
+    - remove(Object o) 移除指定元素，返回布尔值
+
+    - set(int index,E element) 替换指定索引，`返回被替换的 E`
+
+    - subList(fromIndex , toIndex） 返回子集合视图，`左开右闭，即包含起始，不包含结束`
 
 
 
