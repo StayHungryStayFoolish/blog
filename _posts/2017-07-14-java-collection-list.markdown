@@ -10,7 +10,11 @@ header-img: "img/java/hello-world-banner.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
-    - 属性与方法
+    - ArrayList
+    - LinkedList
+    - Vector
+    - Stack
+    - 容量
 ---
 
 ### List
