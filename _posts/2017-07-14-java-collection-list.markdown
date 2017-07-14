@@ -152,5 +152,17 @@ tags:
 
     - subList(fromIndex , toIndex） 返回子集合视图，`左开右闭，即包含起始，不包含结束`
 
+- ArrayList 扩展 List 后
+
+    - removeRange(int formIndex ,int toIndex) 移除列表中起始索引到结束索引之间的所有元素 `左开右闭`
+
+- LinkedList 不再介绍，请查看 API
+
+- Vector
+
+    - setSize() 设定向量大小
+
+- Stack 略
+
 
 
