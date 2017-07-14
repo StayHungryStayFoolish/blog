@@ -106,6 +106,34 @@ tags:
 
     - push() 压入堆栈顶部
 
+### 方法介绍
+
+- List 继承于 Collection，所以拥有 Collection 所有方法
+
+- Collection 接口主要方法
+
+    - add()
+
+    - clear()
+
+    - contains()
+
+    - equals()
+
+    - isEmpty()
+
+    - iterator() `必须使用 Iterator 来接收返回值`
+
+    - remove()
+
+    - size()
+
+    - toArray() `返回此集合中所有元素的数组`
+
+        - 无参使用 Object 接收返回值
+
+        - 有参使用参数类型接收返回值
+
 
 
 
