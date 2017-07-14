@@ -17,9 +17,9 @@ tags:
     - 容量
 ---
 
-### List
+### List 列表
 
-- List 是一个`接口`,继承于 Collection 的接口
+- List 是一个`接口`,继承于 Collection
 
 - 有序队列 `index`
 
@@ -37,7 +37,7 @@ tags:
 
 - Vector : 向量，可以实现自增长的对象数组。JDK 早起版本存在，与上边两个不同的是，Vector 是同步的，保证了线程的安全。
 
-- Stack : 堆栈，继承于 Vector，并进行扩展。采用`后进先出`原则。
+    - Stack : 堆栈，继承于 Vector，并进行扩展。采用`后进先出`原则。
 
 ### ArrayList
 

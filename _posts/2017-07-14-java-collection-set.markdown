@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Java 集合框架之 -- Set"
-subtitle:   "Set 集"
+subtitle:   "Set 集合"
 iframe:     ""
 navcolor:   "invert"
 author:     "Bonismo"
@@ -14,5 +14,21 @@ tags:
     - LinkedHashSet
     - TreeSet
 ---
+
+## Set 集合
+
+- Set 是一个`接口`，继承于 Collection
+
+- 无序
+
+- 不允许重复元素，只允许有一个 Null 存在。
+
+## Set 主要实现类
+
+- HashSet `无序`
+
+    - LinkedHast 继承于 HashSet 以 `元素插入顺序排序`
+
+- TreeSet 按元素`自然顺序排序`，因为实现了 NavigableSet 接口
 
 
