@@ -32,3 +32,12 @@ tags:
 - TreeSet 按元素`自然顺序排序`，因为实现了 NavigableSet 接口
 
 
+### HashSet 特性
+
+- 使用 HashMap 来存储元素，因为 HashSet 是 HashMap 的一个实例。
+
+- 无序
+
+- 效率高
+
+
