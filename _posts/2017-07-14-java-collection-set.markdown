@@ -105,6 +105,35 @@ tags:
 
     - toArray() `返回此集合中所有元素的数组`
 
-            - 无参使用 Object 接收返回值
+         - 无参使用 Object 接收返回值
 
-            - 有参使用参数类型接收返回值 `集合和数组之间转换桥梁`
+         - 有参使用参数类型接收返回值 `集合和数组之间转换桥梁`
+
+- HashSet 扩展方法
+
+    - clone() 返回 HashSet 实例的浅表副本，但不赋值
+
+- LinkedHashSet 含有以上方法
+
+- TreeSet
+
+    - ceiling(E e) 返回大于指定元素的最小元素，无则返回 null
+
+    - comparator() 返回元素进行排序的比较器，使用 Comparator 来接收
+
+    - first() 返回当前第一个元素（也是最低的）
+
+    - floor() 返回小于指定元素的最大元素，无则返回 null
+
+    - last() 返回当前最后一个元素（也是最高的）
+
+    - lower() 返回小于指定元素的最大元素，无则返回 null
+
+    - pollFirst() 移除第一个，set 空则返回 null
+
+    - pollLast() 移除第一个，set 空则返回 null
+
+    - subSet(E fromElement, E toElement) 返回 set 视图，`左开右闭`
+
+
+
