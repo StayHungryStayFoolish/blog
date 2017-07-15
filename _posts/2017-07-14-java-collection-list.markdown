@@ -39,7 +39,7 @@ tags:
 
     - Stack : 堆栈，继承于 Vector，并进行扩展。采用`后进先出`原则。
 
-### ArrayList
+### ArrayList 特性
 
 - 初始容量 `10`
 
@@ -62,7 +62,7 @@ tags:
     - 操作元素越靠前，开销越大，反之亦然。
 
 
-### LinkedList
+### LinkedList 特性
 
 - 底层由链表实现
 
@@ -88,7 +88,7 @@ tags:
 
     - removeLast()
 
-### Vector
+### Vector 特性
 
 - 初始容量 10
 
