@@ -86,4 +86,34 @@ tags:
 
   - keySet() 返回键的映射视图，使用 Set 来接收
 
-  -
+  - put(K key，V value)
+
+  - putAll(Map<? extends ,? extends V> m) 将指定 Map 放入当前 Map
+
+  - remove(Object key)移除指定键
+
+  - size()
+
+  - values() 返回值得 Collection 视图，使用 `Collection` 接收
+
+- HashMap 实现于 Map，拥有全部方法
+
+- HashTable 实现于 Map，拥有全部方法
+
+- LinkedHashMap 实现于 Map，拥有全部方法
+
+- TreeMap 实现于 Map，拥有全部方法
+
+    - firstEntry() 返回最小键关联的 K - V 映射关系，如果映射为空，返回 null ，使用 Map.Entry() 接收
+
+    - firstKey() 返回第一个（也是最低的） 键
+
+    - floorEntry(K key) 返回小于指定键最大的键-值映射关系，不存在返回 null，使用 Mpa.Entry() 接收
+
+    - floorKey(K key) 返回小于指定键最大的关联键，不存在返回 null
+
+    - lastKey() 返回最后一个（也是最高的）键
+
+    - lowerKey(K key) 返回小于支顶尖的最大键
+
+    - subMap(Key fromKey ,Key toKey) 返回映射视图`左开右闭`
