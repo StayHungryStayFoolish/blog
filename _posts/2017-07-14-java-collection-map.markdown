@@ -70,4 +70,20 @@ tags:
 
 - Map 方法
 
+  - clear()
+
+  - containsKey(Object key) 是否包含指定 `键`，无则返回 false
+
+  - containsValue(Object vale) 是否包含一个或多个指定 `值`，无则返回 false
+
+  - entrySet() 返回映射关系视图，使用 Set 来接收
+
+  - equals()
+
+  - get(Object key) 通过指定`键`获取`值`，返回的是 value
+
+  - isEmpty()
+
+  - keySet() 返回键的映射视图，使用 Set 来接收
+
   -
