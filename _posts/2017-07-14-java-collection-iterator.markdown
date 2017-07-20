@@ -25,7 +25,40 @@ tags:
 
     - ListIterator 继承于 Iterator
 
+- 迭代器可以在迭代过程，删除底层集合元素
+
 - cloning、serialization 语义和含义都跟具体的实现相关，由具体实现来绝对如何被克隆、序列化
+
+
+### 迭代器方法
+
+- Iterator 方法
+
+    - hashNext() 如果仍有元素，返回 true `经常放在 for、while 循环中，做判断使用`
+
+    - next() 返回迭代的下一个元素 `有时使用在移动指针的情况`
+
+    - remove() 在迭代底层删除返回的最后一个元素
+
+- ListIterator 方法
+
+    - add()
+
+    - hansNext()
+
+    - hasPrevious()
+
+    - next()
+
+    - `nextIndex()`
+
+    - previous()
+
+    - `previousIndex()`
+
+    - remove()
+
+    - `set(E e)`
 
 ### 区别
 
