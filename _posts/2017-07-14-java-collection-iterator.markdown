@@ -17,11 +17,15 @@ tags:
 
 ### 迭代器
 
--
+- Iterator 接口提供了对很多元素进行迭代的方法。
 
-- Iterator/ListIterator 都是`接口`
+    - 只迭代 List、Set，不迭代 Map
 
-- ListIterator 继承于 Iterator
+- ListIterator 也是 `接口`
+
+    - ListIterator 继承于 Iterator
+
+- cloning、serialization 语义和含义都跟具体的实现相关，由具体实现来绝对如何被克隆、序列化
 
 ### 区别
 
