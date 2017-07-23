@@ -56,14 +56,13 @@ tags:
 
 |实现类|初始容量|扩容|capacity|同步|备注|
 |---|:---:|:---:|:---:|:---:|:---:|
-|ArrayList|10|1.5倍|无|NO||
-|LinkedList|||||
-|Vector|||||||
-|HashSet||||||
-|HashTable||||||
-|LinkedHashSet||||||
-|TreeSet||||||
-|HashMap||||||
-|HashTable||||||
-|LinkedHashMap||||||
-|TreeMap||||||
+|ArrayList|10|1.5倍|无|NO|原容量取0.5有奇数时，选较小值|
+|LinkedList|※|API无说明|无|NO|
+|Vector|10|2倍|`有`|`YES`|||
+|HashSet|16|0.75|无|NO||
+|HashTable|11|0.75|无|YES||
+|LinkedHashSet|16|0.75|无|NO||
+|TreeSet|※|※|无|NO|红-黑树结构|
+|HashMap|16|0.75|无|NO||
+|LinkedHashMap|16|0.75|无|NO||
+|TreeMap|※|※|无|NO|红-黑树结构|
