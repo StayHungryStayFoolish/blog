@@ -40,3 +40,15 @@ tags:
 
 - deepToString 返回深层字符串形式 `二维、多维数组使用`
 
+### Collections 常用方法
+
+- addAll()
+
+- copy(List dest, List src) 复制
+
+- fill()
+
+- indexOfSubList() 返回指定资源首次出现位置，无返回 -1
+
+- lastIndexOfSubList()  返回指定资源最后一次出现位置，无返回 -1
+
