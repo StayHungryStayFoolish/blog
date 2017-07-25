@@ -24,7 +24,7 @@ tags:
 
 ### Arrays 常用方法
 
-- asList() 返回一个数组，List 接收
+- `asList()` 返回一个数组，List 接收
 
 - copyOf() 复制指定数组
 
@@ -34,11 +34,11 @@ tags:
 
 - fill() 填充指定值
 
-- sort() 升序排序
+- `sort()` 升序排序
 
-- toString 返回字符串形式
+- `toString()` 返回字符串形式
 
-- deepToString 返回深层字符串形式 `二维、多维数组使用`
+- `deepToString()` 返回深层字符串形式 `二维、多维数组使用`
 
 ### Collections 常用方法
 
@@ -51,4 +51,14 @@ tags:
 - indexOfSubList() 返回指定资源首次出现位置，无返回 -1
 
 - lastIndexOfSubList()  返回指定资源最后一次出现位置，无返回 -1
+
+- `max()` 返回最大元素
+
+- `min()` 返回最小元素
+
+- `reverse()` 翻转
+
+- `sort()` 升序排序
+
+### 具体请参考 API 文档
 
