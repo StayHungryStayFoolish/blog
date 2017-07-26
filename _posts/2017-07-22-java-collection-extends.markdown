@@ -52,17 +52,17 @@ tags:
 |容量|16|16|无||
 |次序|无序|插入顺序|自然顺序|TreeSet 实现 NavigableSet接口|
 
-### 容量、同步
+### 初始容量、扩容、同步
 
-|实现类|初始容量|扩容|capacity|同步|备注|
-|---|:---:|:---:|:---:|:---:|:---:|
-|ArrayList|10|1.5倍|无|NO|原容量取0.5有奇数时，选较小值|
-|LinkedList|※|API无说明|无|NO|
-|Vector|10|2倍|`有`|`YES`|||
-|HashSet|16|0.75|无|NO||
-|HashTable|11|0.75|无|YES||
-|LinkedHashSet|16|0.75|无|NO||
-|TreeSet|※|※|无|NO|红-黑树结构|
-|HashMap|16|0.75|无|NO||
-|LinkedHashMap|16|0.75|无|NO|底层使用 Hashtable 实现|
-|TreeMap|※|※|无|NO|红-黑树结构|
+|接口|实现类|初始容量|扩容|capacity|同步|备注|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+|`List`|ArrayList|10|1.5倍|无|NO|原容量取0.5有奇数时，选较小值|
+||LinkedList|※|API无说明|无|NO|
+||Vector|10|2倍|`有`|`YES`|||
+|`Set`|HashSet|16|0.75|无|NO||
+||HashTable|11|0.75|无|YES||
+||LinkedHashSet|16|0.75|无|NO||
+||TreeSet|※|※|无|NO|红-黑树结构|
+|`Map`|Hashmap|16|0.75|无|NO||
+||LinkedHashMap|16|0.75|无|NO|底层使用 Hashtable 实现|
+||TreeMap|※|※|无|NO|红-黑树结构|
