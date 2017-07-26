@@ -66,3 +66,10 @@ tags:
 |`Map`|Hashmap|16|0.75|无|NO||
 ||LinkedHashMap|16|0.75|无|NO|底层使用 Hashtable 实现|
 ||TreeMap|※|※|无|NO|红-黑树结构|
+
+### Array、List
+
+|数据类型|Array 数组|List 集合|
+|---|:---:|:---:|
+|基本数据类型|YES|NO|
+|引用数据类型|YES|YES|

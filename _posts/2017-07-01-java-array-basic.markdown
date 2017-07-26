@@ -68,6 +68,33 @@ ints = {1,2,3,4,5};
     int[ ] arr = new int`[` 3 `]`;
     System.out.println(arr.getClass());
 
+### 数组的赋值
+
+- 数组引用，指向同一个 `堆`地址
+
+
+        int[ ] = new int [ 3 ];
+
+        int[ ] = a ;
+
+- 数组复制，指向不同的`堆`地址
+
+        int [ ] a = new int [ 3 ];
+
+        int [ ] b = a.clone();
+
+### 下标越界异常
+
+- ArrayIndexOutOfBoundsException
+
+        int [ ] arr = new int [ 4 ]
+
+        System.out.println(arr[ 4 ]);
+
+    - 正确输出是 arr`[` 3 `]`
+
+- 数组索引起始是 `0`
+
 ### 打印数组
 
 - Arrays.toString(arr);
