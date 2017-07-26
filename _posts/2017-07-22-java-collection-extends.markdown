@@ -64,5 +64,5 @@ tags:
 |LinkedHashSet|16|0.75|无|NO||
 |TreeSet|※|※|无|NO|红-黑树结构|
 |HashMap|16|0.75|无|NO||
-|LinkedHashMap|16|0.75|无|NO||
+|LinkedHashMap|16|0.75|无|NO|底层使用 Hashtable 实现|
 |TreeMap|※|※|无|NO|红-黑树结构|
