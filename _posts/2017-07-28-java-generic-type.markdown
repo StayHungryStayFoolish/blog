@@ -133,4 +133,42 @@ tags:
             This point is：25.4, 东京180度
 
 
+- 这既是泛型的好处。
+
+### 泛型定义
+
+- class(interface) + 类名（接口名）+ < 类型参数列表 extends / super 类
+
+  型 & 类型 & ...> {...}
+
+- 常用泛型参数命名
+
+    - E 元素
+
+    - K Key
+
+    - V Value
+
+    - N Number
+
+    - T Type
+
+    - .eg
+
+    是不是看到了 K、V ，对 Map 内的 K、V 就是泛型
+
+- 可以定义有界类型
+
+    - 比如：在定义泛型 T 时，扩展了 Number, ID 就被定义了一个边界条件
+
+     `public interface GenericDemo < ID extends Number>`
+
+### 泛型作用
+
+- 类型安全，附加了类型检车，避免强制类型转换出现 ClassCastException
+
+- 简化代码，优化结构，提高代码复用率
+
+
+
 
