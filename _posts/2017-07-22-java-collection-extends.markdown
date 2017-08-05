@@ -113,3 +113,39 @@ tags:
 
     Map<String,HashMap<String,Integer>> company = Map<String,HashMap<String,String>>
     HashMap
+
+
+            public class MapDemo2{
+            	public static void main(String []args){
+            		Map<String,HashMap<String,Integer>> company = new HashMap<String,HashMap<String,Integer>>();
+            		HashMap<String,Integer> renli = new HashMap<String,Integer>();
+            		HashMap<String,Integer> jishu = new HashMap<String,Integer>();
+            		company.put("renli",renli);
+            		company.put("jishu",jishu);
+
+            		renli.put("liu",18);
+            		renli.put("li",19);
+
+            		jishu.put("xu",18);
+            		jishu.put("wang",19);
+            		Set<String> keySet = company.keySet();
+            		Iterator<String> it = keySet.iterator();
+            		while(it.hasNext()){
+            			String bumen = it.next();
+            			System.out.println("公司部门："+bumen);
+            			HashMap<String,Integer> hs = company.get(bumen);
+            			getInfo(hs);
+            		}
+
+            	}
+            	public static void getInfo(HashMap<String,Integer> hashMap){
+            		Set<Map.Entry<String,Integer>> entrySet = hashMap.entrySet();
+            		Iterator<Map.Entry<String,Integer>> it = entrySet.iterator();
+            		while(it.hasNext()){
+            			Map.Entry<String,Integer> me = it.next();
+            			String name = me.getKey();
+            			Integer age = me.getValue();
+            			System.out.println("name:"+name+" age:"+age);
+            		}
+            	}
+            }
