@@ -184,3 +184,62 @@ tags:
   因为HashMap底层是hash表，每次new一个对象时，会产生不同的hashCode。因此不能比较Student中姓名和年龄相同的值。
   所以需要覆写hashCode和equals方法
   实现Comparable接口，为了规范，可以使TreeMap集合存储Student对象的数据。若不实现，则不能用TreeMap存储。
+
+
+            //实现Comparable接口，提供按照姓名和年龄的自然顺序排序的方法
+            class Student implements Comparable<Student>
+            {
+            	private String name;
+            	private int age;
+            	public Student(String name,int age){
+            		this.name = name;
+            		this.age = age;
+            	}
+            	public int getAge(){
+            		return age;
+            	}
+            	public String getName(){
+            		return name;
+            	}
+            	public int compareTo(Student s){
+            		int num = this.getName().compareTo(s.getName());
+            		if(num == 0)
+            			return new Integer(this.getAge()).compareTo(new Integer(s.getAge()));
+            		return num;
+            	}
+            	public int hashCode(){
+            		//保证new出的对象的hash值的唯一性
+            		return name.hashCode()+age*60;
+            	}
+            	public boolean equals(Object obj){
+            		if(!(obj instanceof Student))
+            			throw new RuntimeException("类型不匹配");
+            		Student stu = (Student)obj;
+            		return this.age==stu.getAge() && this.name.equals(stu.getName());
+            	}
+            	public String toString(){
+            		return "[name = "+name+" age = "+age+"]";
+            	}
+            }
+            public class HashMapDemo{
+            	public static void main(String args[]){
+            		Map<Student,String> map = new HashMap<Student,String>();
+            		map.put(new Student("lzl",18),"河南理工");
+            		map.put(new Student("lzl1",18),"河南理工");
+            		map.put(new Student("lzl2",18),"河南理工");
+            		map.put(new Student("lzl3",18),"河南理工");
+            		map.put(new Student("lzl4",18),"河南理工");
+            		map.put(new Student("lzl4",18),"河南理工");
+            		getInfo(map);
+            	}
+            	public static void getInfo(Map<Student,String> map){
+            		Set<Map.Entry<Student,String>> entrySet = map.entrySet();
+            		Iterator<Map.Entry<Student,String>> it = entrySet.iterator();
+            		while(it.hasNext()){
+            			Map.Entry<Student,String> me = it.next();
+            			Student stu = me.getKey();
+            			String address = me.getValue();
+            			System.out.println("Student:"+stu+" address:"+address);
+            		}
+            	}
+            }
