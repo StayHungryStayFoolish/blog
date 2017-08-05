@@ -117,3 +117,51 @@ tags:
     - lowerKey(K key) 返回小于支顶尖的最大键
 
     - subMap(Key fromKey ,Key toKey) 返回映射视图`左开右闭`
+
+
+### 例：
+
+- Map 两种遍历
+
+
+        public class MapDemo{
+        	public static void main(String []args){
+        		Map<String,String> map = new HashMap<String,String>();
+        		map.put("01","lzl-1");
+        		map.put("02","lzl-2");
+        		map.put("03","lzl-3");
+        		map.put("04","lzl-4");
+        		map.put("05","lzl-4");
+        		method_keySet(map);
+        		method_entrySet(map);
+        	}
+        	public static void method_keySet(Map<String,String> map){
+        		//通过keySet方法获取Set<key>类型的值。
+        		Set<String> keySet = map.keySet();
+        		//有了Set集合，就可以用到Iterator(迭代器)了
+        		Iterator<String> it = keySet.iterator();
+        		while(it.hasNext()){
+        			//获取map集合中的key值
+        			String key = it.next();
+        			//通过Map集合中的get方法，获取Value值
+        			String value = map.get(key);
+        			System.out.println("keySet方法--->"+" key:"+key+" value："+value);
+        		}
+        	}
+        	/*
+
+        	*/
+        	public static void method_entrySet(Map<String,String> map){
+        		//通过entrySet方法获取Map集合中的映射关系
+        		Set<Map.Entry<String,String>> entrySet = map.entrySet();
+        		//获取Set集合，使用迭代器提供的方法获取Map集合中存入的键值
+        		Iterator<Map.Entry<String,String>> it = entrySet.iterator();
+        		while(it.hasNext()){
+        			//Entry是Map接口这种的内部静态接口，实现该接口的方法，都拥有getValue()和getKey()的方法。
+        			Map.Entry<String,String> me = it.next();
+        			String value = me.getValue();
+        			String key = me.getKey();
+        			System.out.println("entrySet方法--->"+" key:"+key+" value："+value);
+        		}
+        	}
+        }
