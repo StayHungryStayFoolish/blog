@@ -168,3 +168,55 @@ tags:
 
     5、按照格式遍历输出字符串
 
+
+            public class TreeMapDemo{
+            	public static void main(String []args){
+            		System.out.println("请输入字符串");
+            		Scanner input = new Scanner(System.in);
+            		String str =  input.next();
+            	//	String str = "aabbbbbccda";
+            	char[] ch = str.toCharArray();
+            	Map<Character,Integer> map = getChar(ch);
+            	if(map.isEmpty())
+            		System.out.println("空字符");
+            	valueSort(map);
+            	}
+            	/**
+            	 * 按照value值进行排序
+            	 * 思路，将Map集合转换成List集合，利用Collections.sort(list,Comparator<>)方法进行排序
+            	 * @param map
+            	 */
+            	public static void valueSort(Map<Character,Integer> map){
+            		System.out.println("--------");
+            		List<Entry<Character, Integer>> list = new ArrayList<Map.Entry<Character,Integer>>(map.entrySet());
+            		Collections.sort(list,new Comparator<Map.Entry<Character, Integer>>() {
+            			@Override
+            			public int compare(Entry<Character, Integer> o1,
+            					Entry<Character, Integer> o2) {
+            				return o2.getValue() - o1.getValue();
+            			}
+            		});
+            		Iterator<Entry<Character, Integer>> it = list.iterator();
+            		while(it.hasNext()){
+            			Map.Entry<Character,Integer> me = it.next();
+            			char c = me.getKey();
+            			int v = me.getValue();
+            			System.out.println(c+"("+v+")");
+            		}
+            	}
+            	public static Map<Character,Integer> getChar(char[] ch){
+            		Map<Character,Integer> map = new TreeMap<Character,Integer>();
+            		for(int i=0;i<ch.length;i++){
+            			if(ch[i]<'a'&&ch[i]>'z'||ch[i]<'A'&&ch[i]>'Z')
+            				continue;
+            			Integer value = map.get(ch[i]);  //通过key值获取map中存入的value值
+            			if(value == null){  //如果value为空，表示map中不存在该字符，我们将它存入到map中
+            				map.put(ch[i],1);
+            			}else{ //如果不为空，表示map中已经存在该字符，我们将value值+1在存入到map中
+            				value++;
+            				map.put(ch[i],value);
+            			}
+            		}
+            		return map;
+            	}
+            }
