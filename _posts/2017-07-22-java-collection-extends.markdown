@@ -45,6 +45,7 @@ tags:
 |访问|`快`根据索引随机访问|`慢`支持首尾||
 |插入、删除|慢|快|ArrayList需要移动，LinkedList 只需改变前后指针指向|
 |场景|快速随机访问|频繁操作数据||
+|内存|相对少|更占用|因为 ArrayList 是索引，一个节点一个引用，LinkedList一个节点两个引用，分别指向前、后元素|
 
 ### HashSet、LinkedHashSet、TreeSet
 ||HashSet|LinkedHashSet|TreeSet|备注|
@@ -67,12 +68,15 @@ tags:
 ||LinkedHashMap|16|0.75|无|NO|底层使用 Hashtable 实现|
 ||TreeMap|※|※|无|NO|红-黑树结构|
 
-### Array、List
+### Array、ArrayList
 
-|数据类型|Array 数组|List 集合|
-|---|:---:|:---:|
-|基本数据类型|YES|NO|
-|引用数据类型|YES|YES|
+|数据类型|Array 数组|ArrayList 集合|备注|
+|---|:---:|:---:|:---:|
+|基本类型|YES|NO||
+|对象类型|YES|YES||
+|大小|固定|动态|数组初始化、声明、创建是一体的，不可分割|
+|拆箱、装箱|处理基本数据类型快|处理固定大小的基本数据类型慢|ArrayList y要拆装箱|
+|属性|length|size()方法，无 length 属性||
 
 ### HashMap、Hashtable
 
