@@ -237,4 +237,21 @@ tags:
         	}
         }
 
+- LinkedList
+
+
+         public class LinkedListDemo{
+         	public static void main(String args[]){
+         		LinkedList ll = new LinkedList();
+         		ll.offerFirst("java1");
+         		ll.offerFirst("java2");
+         		ll.offerFirst("java3");
+         		ll.offerFirst("java4");
+         		sop(ll);
+         	}
+         	public static void sop(Object obj){
+         		System.out.println(obj);
+         	}
+         }
+
 
