@@ -25,7 +25,7 @@ tags:
 
 ||Collection|Map|备注|
 |---|:---:|:---:|:---:|
-|结构|每个位置只存一个元素，允许 null 存在|Key-Value结构，Key不允许 null|Map 像小型数据库|
+|结构|每个位置只存一个元素，允许 null 存在|Key-Value结构，Key不允许 重复|Map 像小型数据库|
 |形式|元素的集合|元素映射||
 
 ### List、Set
@@ -73,3 +73,12 @@ tags:
 |---|:---:|:---:|
 |基本数据类型|YES|NO|
 |引用数据类型|YES|YES|
+
+### HashMap、Hashtable
+
+||HashMap|Hashtable|备注|
+|---|:---:|:---:|:---:|
+|null|键值都可以是null|键值都不允许||
+|同步|NO|YES||
+|适用场景|单线程|多线程||
+
