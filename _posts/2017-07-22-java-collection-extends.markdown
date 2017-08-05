@@ -94,3 +94,22 @@ tags:
 
     - 将已有对象传入另一个类的构造器，然后创建新对象，以此来增加新功能。
 
+
+### 例：
+
+- Map 扩展
+
+    例子：一个公司类，包括人力资源部门和技术部门。每个部门包括姓名和年龄
+
+    要求存入到map集合中。
+
+    步骤：
+
+    利用嵌套的Map集合
+
+    第一个map集合存储公司部门和HashMap<String,String>
+
+    HashMap<String,String> 中存储对应的部门人姓名和年龄
+
+    Map<String,HashMap<String,Integer>> company = Map<String,HashMap<String,String>>
+    HashMap
