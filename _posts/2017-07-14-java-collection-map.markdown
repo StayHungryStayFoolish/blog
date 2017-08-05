@@ -165,3 +165,22 @@ tags:
         		}
         	}
         }
+
+### 一个学生对象，包括姓名和年龄。每个学生都有家庭住址。
+
+- 我们认为学生的姓名和年龄相同表示同一个人。地址可以相同
+
+  步骤：
+
+  1、定义一个学生类，重写hashCode和equals方法。
+  并实现Comparable接口，重写compareTo(Object o1,Object o2)方法按照年龄和姓名的顺序来排列
+
+  2、将学生对象和学生的住址存入到HashMap中去。key--Student,value--String(地址)
+
+  3、通过keySet或者entrySet方法将数据一一取出。
+
+  解释：
+
+  因为HashMap底层是hash表，每次new一个对象时，会产生不同的hashCode。因此不能比较Student中姓名和年龄相同的值。
+  所以需要覆写hashCode和equals方法
+  实现Comparable接口，为了规范，可以使TreeMap集合存储Student对象的数据。若不实现，则不能用TreeMap存储。
