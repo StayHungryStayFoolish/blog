@@ -137,4 +137,57 @@ tags:
     - subSet(E fromElement, E toElement) 返回 set 视图，`左开右闭`
 
 
+### 例：
 
+- HashSet
+
+
+        public class SetDemo{
+        	public static void main(String args[]){
+        		HashSet hs = new HashSet();
+        		hs.add(new Person("lzl",18));
+        		hs.add(new Person("lzl",18));
+        		hs.add(new Person("hhh",18));
+        		hs.add(new Person("lzl",18));
+        		Iterator it = hs.iterator();
+        		while(it.hasNext()){
+        			Person p = (Person)it.next();
+        			sop(p.getName()+"-------"+p.getAge());
+        		}
+        	}
+        	public static void sop(Object obj){
+        		System.out.println(obj);
+        	}
+        }
+        class Person{
+        	private String name ;
+        	private int age;
+        	public Person(){
+
+        	}
+        	public Person(String name,int age){
+        		this.name = name;
+        		this.age = age;
+        	}
+        	public int getAge(){
+        		return this.age;
+        	}
+        	public String getName(){
+        		return this.name;
+        	}
+        	//覆写hashCode()方法，保证hashCode具有唯一性
+        	public int hashCode(){
+        		System.out.println("hashCode---"+this.name.hashCode()*age);
+        		return this.name.hashCode()*age;
+        	}
+        	//因为要比较的是Person类中的name和age值，所以重写Object类的equals方法，
+        	public boolean equals(Object obj){
+        		//如果传入的对象不是Person类，直接返回false
+        		if(!(obj instanceof Person))
+        			return false;
+        		//否则强转成Person类
+        		Person p = (Person)obj;
+        		//返回name和age的比较值。
+        		return this.name.equals(p.getName()) && this.age == p.getAge();
+        	}
+        }
