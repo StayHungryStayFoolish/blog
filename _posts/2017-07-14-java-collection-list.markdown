@@ -169,4 +169,72 @@ tags:
 - Stack 略
 
 
+### 例
+
+- List
+
+        public class ListDemo{
+        	public static void main(String []args){
+        		//List list = method_Add();
+        		//method_it(list);
+        		//sop(list);
+        		method_ArrayList();
+        	}
+        	public static void method_ArrayList(){
+        		ArrayList al = new ArrayList();
+        		sop(al.size());
+        	}
+        	public static List method_Add(){
+        		List list = new ArrayList();
+        		list.add("java1--->name");
+        		list.add("java2--->name");
+        		list.add("java3--->name");
+        		list.add(2,"java4--->name");  //在制定位置插入
+        		return list;
+        	}
+        	public static void method_it(List list){
+        		//通过iteraror遍历元素
+        		ListIterator li = list.listIterator();
+        		while(li.hasNext()){
+        			Object obj = li.next();
+        			if(obj.equals("java3--->name"))
+        				li.add("i love xy");
+        			sop(obj);
+        		}
+        		while(li.hasPrevious()){
+        				Object obj1 = li.previous();
+        				sop("逆序--"+obj1);
+        		}
+        		/**此处会抛出ConcurrentModificationException异常
+        		Iterator it = list.iterator();
+        		while(it.hasNext()){
+        			Object obj = it.next();
+        			if(obj.equals("java3--->name")){
+        				list.add("i love xuYan");
+        			}
+        			sop(obj);
+        		}**/
+
+        	}
+        	public static void sop(Object obj){
+        		System.out.println(obj);
+        	}
+        }
+
+- Vector
+
+        public class VectorDemo{
+        	public static void main(String args[]){
+        		Vector v = new Vector();
+        		v.add("hello");
+        		v.add("world");
+        		v.add("hi");
+        		v.add("java");
+        		Enumeration en = v.elements();  //获取枚举类型的数据
+        		while(en.hasMoreElements()){
+        			System.out.println("遍历枚举类型的数据："en.nextElement());
+        		}
+        	}
+        }
+
 
