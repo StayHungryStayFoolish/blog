@@ -317,3 +317,43 @@ tags:
 - 定义一堆字符串，要求按照字符串的长度大小来排序,如果字符串长度相同，那么按照字符串的字母顺序排序。
 
 
+                    public class TreeSetDemo{
+                    	public static void main(String args[]){
+                    		TreeSet ts = new TreeSet(new myCopara());
+                    		ts.add("abc");
+                    		ts.add("abcd");
+                    		ts.add("abcde");
+                    		ts.add("abce");
+                    		ts.add("fffff");
+                    		ts.add("fffff");
+                    	//	ts.add(2);
+                    		Iterator it = ts.iterator();
+                    		while(it.hasNext()){
+                    			String s = (String)it.next();
+                    			sop(s);
+                    		}
+                    	}
+                    	public static void sop(Object obj){
+                    		System.out.println(obj);
+                    	}
+                    }
+                    /**
+                    实现Comparator接口，并覆写int compare(T o1, T o2)
+                    */
+                    class myCopara implements Comparator{
+                    	public int compare(Object o1,Object o2){
+                    		if(!(o1 instanceof String) || !(o2 instanceof String))
+                    			throw new RuntimeException("不是字符串类型");
+                    		String s1 = (String)o1;
+                    		String s2 = (String)o2;
+                    		int size1 = s1.length();
+                    		int size2 = s2.length();
+                    		int num = new Integer(size1).compareTo(new Integer(size2));
+                    		//如果长度相同，那么按照字符串的字母顺序排列
+                    		if(num == 0){
+                    			//System.out.println(s1+"----"+s2);
+                    			return s1.compareTo(s2);
+                    		}
+                    		return num;
+                    	}
+                    }
