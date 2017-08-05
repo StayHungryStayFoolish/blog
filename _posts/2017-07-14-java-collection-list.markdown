@@ -255,3 +255,77 @@ tags:
          }
 
 
+- 去除ArrayList中的相同对象元素。即：姓名和年龄相同的步骤：
+
+  1、构造Person类，定义姓名、年龄两个属性，重写equals方法。
+
+  2、将Person对象存储到ArrayList集合中。
+
+  3、将对象一个个的取出。
+
+  4、定义一个新的集合，将就集合中的数据放入新集合，在此之前先判断新集合中是否存在该数据。
+
+
+        class Person{
+        	private String name ;
+        	private int age;
+        	public Person(){
+
+        	}
+        	public Person(String name,int age){
+        		this.name = name;
+        		this.age = age;
+        	}
+        	public int getAge(){
+        		return this.age;
+        	}
+        	public String getName(){
+        		return this.name;
+        	}
+        	//因为要比较的是Person类中的name和age值，所以重写Object类的equals方法，
+        	public boolean equals(Object obj){
+        		//如果传入的对象不是Person类，直接返回false
+        		if(!(obj instanceof Person))
+        			return false;
+        		//否则强转成Person类
+        		Person p = (Person)obj;
+        		//返回name和age的比较值。
+        		return this.name.equals(p.getName()) && this.age == p.getAge();
+        	}
+        }
+        public class ArrayListDemo{
+        	public static void main(String args[]){
+        		ArrayList al = new ArrayList();
+        		//Person p = new Person();
+        		al.add(new Person("lzl",18));
+        		al.add(new Person("lzl1",18));
+        		al.add(new Person("lzl2",18));
+        		al.add(new Person("lzl3",18));
+        		al.add(new Person("lzl",18));
+        		al = sigleElements(al);
+        		Iterator it = al.iterator();
+        		while(it.hasNext()){
+        			Person p = (Person)it.next();
+        			sop(p.getName()+"---"+p.getAge());
+        		}
+        	}
+        	public static void sop(Object obj){
+        		System.out.println(obj);
+        	}
+        	/*
+        		去除相同的元素
+        	*/
+        	public static ArrayList sigleElements(ArrayList al){
+        		ArrayList newAl = new ArrayList();
+        		Iterator it = al.iterator();
+        		while((it.hasNext())){
+        			Object obj = it.next();
+        			//如果新链表中不存在P对象的元素，则添加。
+        			if(!newAl.contains(obj)){
+        				sop("---");
+        				newAl.add(obj);
+        			}
+        		}
+        		return newAl;
+        	}
+        }
