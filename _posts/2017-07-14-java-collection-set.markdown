@@ -191,3 +191,129 @@ tags:
         		return this.name.equals(p.getName()) && this.age == p.getAge();
         	}
         }
+
+
+- TreeSet
+
+  定义一个学生类，存入姓名、年龄，按照年龄排序
+
+
+        public class SetDemo{
+        	public static void main(String args[]){
+        		TreeSet ts = new TreeSet();
+        		ts.add(new Student("lzl",18));
+        		ts.add(new Student("lzl",19));
+        		ts.add(new Student("lzl",10));
+        		ts.add(new Student("lzl",20));
+        		ts.add(new Student("lml",20));
+        		ts.add(new Student("lzl",20));
+        		Iterator it = ts.iterator();
+        		while(it.hasNext()){
+        			Student s = (Student)it.next();
+        			sop(s.getName()+"------"+s.getAge());
+        		}
+        	}
+        	public static void sop(Object obj){
+        		System.out.println(obj);
+        	}
+        }
+        /**
+        因为要将学生类按照年龄来排序，所以要实现Comparable接口，并
+        覆写compareTo(Object obj)方法
+        */
+        class Student implements Comparable
+        {
+        	private String name ;
+        	private int age;
+        	public Student(){
+
+        	}
+        	public Student(String name,int age){
+        		this.name = name;
+        		this.age = age;
+        	}
+        	public int getAge(){
+        		return this.age;
+        	}
+        	public String getName(){
+        		return this.name;
+        	}
+        	/**
+        	return：负整数、零或正整数，根据此对象是小于、等于还是大于指定对象。
+        	*/
+        	public int compareTo(Object obj){
+        		if(!(obj instanceof Student))
+        			throw new RuntimeException("不是学生类");
+        		Student s = (Student)obj;
+        		if(this.age > s.getAge())
+        			return 1;
+        		if(this.age == s.getAge()){
+        			//年龄如果相同，比较姓名是否相同
+        			return this.name.compareTo(s.getName());
+        		}
+        		return -1;
+        	}
+        }
+
+     改变学生类的需求，要求让存储的学生类按照姓名的字母排序。
+
+            public class TreeSetDemo{
+            	public static void main(String args[]){
+            		TreeSet ts = new TreeSet(new myCopara());
+            		ts.add(new Student("lzl",18));
+            		ts.add(new Student("lzl",19));
+            		ts.add(new Student("lzl",10));
+            		ts.add(new Student("lzl",12));
+            		ts.add(new Student("lml",20));
+            		ts.add(new Student("lzl",20));
+            		ts.add(new Student("xy",20));
+            		ts.add(new Student("as",100));
+            		Iterator it = ts.iterator();
+            		while(it.hasNext()){
+            			Student s = (Student)it.next();
+            			sop(s.getName()+"------"+s.getAge());
+            		}
+            	}
+            	public static void sop(Object obj){
+            		System.out.println(obj);
+            	}
+            }
+            /**
+            实现Comparator接口，并覆写int compare(T o1, T o2)
+            */
+            class myCopara implements Comparator{
+            	public int compare(Object o1,Object o2){
+            		if(!(o1 instanceof Student) || !(o2 instanceof Student))
+            			throw new RuntimeException("不是学生类型");
+            		Student s1 = (Student)o1;
+            		Student s2 = (Student)o2;
+            		int num = s1.getName().compareTo(s2.getName());
+            		if(num == 0){
+            			return new Integer(s1.getAge()).compareTo(new Integer(s2.getAge()));
+            		}
+            		return num;
+            	}
+            }
+            class Student
+            {
+            	private String name ;
+            	private int age;
+            	public Student(){
+
+            	}
+            	public Student(String name,int age){
+            		this.name = name;
+            		this.age = age;
+            	}
+            	public int getAge(){
+            		return this.age;
+            	}
+            	public String getName(){
+            		return this.name;
+            	}
+            }
+
+
+- 定义一堆字符串，要求按照字符串的长度大小来排序,如果字符串长度相同，那么按照字符串的字母顺序排序。
+
+
