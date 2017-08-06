@@ -316,3 +316,75 @@ tags:
             		}
             	}
             }
+
+
+- 字节流与字符流之间的转换，称作转换流
+
+  包括：InputStreamReader--->是字节流通向字符流的桥梁、OutputStreamWriter--->是字符流通向字节流的桥梁
+
+            public class TransStreamDemo{
+            	public static void main(String []args)throws IOException{
+            		//keyboardRW();
+            		//fileprintToConsole();
+            		//writeToFile();
+            		//exceptionInfo();
+            		printProperty();
+            	}
+            	//键盘读写方法
+            	public static void keyboardRW()throws IOException{
+            		//键盘录入的最常见形式
+            		BufferedReader bufr =
+            						new BufferedReader(new InputStreamReader(System.in));
+            		BufferedWriter bufw =
+            					    new BufferedWriter(new OutputStreamWriter(System.out));
+            		String line =null;
+            		while((line = bufr.readLine())!=null){
+            				bufw.write(line);
+            				//换行
+            				bufw.newLine();
+            				//刷新缓冲
+            				bufw.flush();
+            				if("end".equals(line))
+            					break;
+            		}
+            		bufr.close();
+            		bufw.close();
+            	}
+            	//将文本文件打印到控制台上
+            	public static void fileprintToConsole()throws IOException{
+            		BufferedReader bufr =
+            						new BufferedReader(new InputStreamReader(new FileInputStream("TransStreamDemo.java")));
+            		BufferedWriter bufw =
+            					    new BufferedWriter(new OutputStreamWriter(System.out));
+            		String line =null;
+            		while((line = bufr.readLine())!=null){
+            				bufw.write(line.toUpperCase());
+            				//换行
+            				bufw.newLine();
+            				//刷新缓冲
+            				bufw.flush();
+            				if("end".equals(line))
+            					break;
+            		}
+            		bufr.close();
+            		bufw.close();
+            	}
+            	//将键盘录入的信息，写到文件中
+            	public static void writeToFile()throws IOException{
+            		BufferedReader bufr =
+            						new BufferedReader(new InputStreamReader(System.in));
+            		BufferedWriter bufw =
+            					    new BufferedWriter(new OutputStreamWriter(new FileOutputStream("sys.txt")));
+            		String line =null;
+            		while((line = bufr.readLine())!=null){
+            				bufw.write(line);
+            				//换行
+            				bufw.newLine();
+            				//刷新缓冲
+            				bufw.flush();
+            				if("end".equals(line))
+            					break;
+            		}
+            		bufr.close();
+            		bufw.close();
+            	}
