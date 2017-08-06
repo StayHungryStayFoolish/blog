@@ -278,3 +278,41 @@ tags:
             	}
             }
 
+- 模拟LineNumberReader中getLineNumber()的实现方法
+
+
+            /**
+            模拟一个带行号的文件读取缓冲区。
+            实现思路：
+            1、mySetLineNumber(int number)方法用于设置从第number开始计数。
+            2、myGetLineNumber()获取读取文件的行号。
+            3、定义一个public int number = 0;
+            4、当遇到\n时，代表这行结束number++;
+            */
+            import java.io.*;
+            class myLineNumber extends myBufferedReader{
+            	private int number=0;
+            	public myLineNumber(FileReader fr){
+            		super(fr);
+            	}
+            	public void mySetLineNumber(int number){
+            		this.number = number;
+            	}
+            	public int myGetLineNumber(){
+            		return this.number;
+            	}
+            	public String myReadLine()throws IOException{
+            		number++;
+            		return super.myReadLine();
+            	}
+            }
+            public class LineNumberDemo{
+            	public static void main(String []args)throws IOException{
+            		myLineNumber mln = new myLineNumber(new FileReader("FileReaderDemo.java"));
+            		String line = null;
+            		mln.mySetLineNumber(20);
+            		while((line = mln.myReadLine())!=null){
+            			System.out.println(mln.myGetLineNumber()+":"+line);
+            		}
+            	}
+            }
