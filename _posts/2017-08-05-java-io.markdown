@@ -101,4 +101,180 @@ tags:
                 	}
                 }
 
--
+- FileReader的方法 `两种`
+
+        public class FileReaderDemo{
+        	public static void main(String args[]){
+        		String content = ReadByCharArray("demo.txt");
+        		System.out.println(content);
+        	}
+        	//通过Read()方法来一个字符一个字符的读取
+        	public static String ReadByOne(String fileName){
+        		FileReader fileReader = null;
+        		StringBuffer sb = null;
+        		try{
+        			fileReader = new FileReader(fileName);
+        		    sb = new StringBuffer();
+        			int ch = 0;
+        			while((ch=fileReader.read())!=-1){
+        				sb.append((char)ch);
+        			}
+        		}catch(IOException e){
+        			System.out.println("catch:"+e.toString());
+        		}finally{
+        			try{
+        				if(fileReader!=null)
+        					fileReader.close();
+        			}catch(Exception e){
+        				System.out.println("----"+e.toString());
+        			}
+        		}
+        		return sb.toString();
+        	}
+        	//通过read(char[] ch)方法来读取字符数组
+        	public static String ReadByCharArray(String fileName){
+        		FileReader fileReader = null;
+        		String str = null;
+        		try{
+        			fileReader = new FileReader(fileName);
+        			char[] ch = new char[1024];
+        			int num = 0;
+        			while((num=fileReader.read(ch))!=-1){
+        				str = new String(ch,0,num);
+        			}
+        		}catch(IOException e){
+        			System.out.println("catch:"+e.toString());
+        		}finally{
+        			try{
+        				if(fileReader!=null)
+        					fileReader.close();
+        			}catch(Exception e){
+        				System.out.println("----"+e.toString());
+        			}
+        		}
+        		return str;
+        	}
+        }
+
+- 带缓冲区的字符流BufferedReader及BufferedWriter的用法
+
+
+        /**
+        为了提高文件的读写效率，java封装一个BufferReader和bufferWriter类。
+        作为文件的缓冲
+        BufferReader：从字符输入流中读取文本，缓冲各个字符，从而实现字符、数组和行的高效读取。
+        BufferWriter: 将文本写入字符输出流，缓冲各个字符，从而提供单个字符、数组和字符串的高效写入。
+        */
+        import java.io.*;
+        public class BufferedReaderDemo{
+        	public static void main(String args[]){
+        		boolean flag = copyByBuffered("demo.txt","buf.txt");
+        		System.out.println("复制成功："+flag);
+        	}
+        	//通过ReadLine()方法来读取文件的一行数据
+        	public static String ReadByReadLine(String fileName){
+        		FileReader fileReader = null;
+        		StringBuffer sb = null;
+        		BufferedReader bufr = null;
+        		try{
+        			fileReader = new FileReader(fileName);
+        		    bufr = new BufferedReader(fileReader);
+        			sb = new StringBuffer();
+        		   String line = null;
+        			   while((line=bufr.readLine())!=null){
+        					sb.append(line);
+        			   }
+        		}catch(IOException e){
+        			System.out.println("catch:"+e.toString());
+        		}finally{
+        			try{
+        				if(bufr!=null)
+        					bufr.close();
+        			}catch(Exception e){
+        				System.out.println("----"+e.toString());
+        			}
+        		}
+        		return sb.toString();
+        	}
+        	public static boolean copyByBuffered(String readFile,String writeFile){
+        		boolean flag = false;
+        		BufferedReader bufr = null;
+        		BufferedWriter bufw = null;
+        		try{
+        			//定义BufferedReader缓冲区，读取文件流
+        	        bufr = new BufferedReader(new FileReader(readFile));
+        		//定义BufferedWriter缓冲区，向指定文件中写入。
+        		    bufw = new BufferedWriter(new FileWriter(writeFile));
+        		String line = null;
+        			while((line=bufr.readLine())!=null){
+        				bufw.write(line);
+        				bufw.flush();
+        				flag =true;
+        			}
+        		}catch(IOException e){
+        			e.toString();
+        		}finally{
+        			try{
+        				if(bufr!=null&&bufw!=null){
+        					bufr.close();
+        					bufw.close();
+        				}
+        			}catch(Exception e){
+        			}
+        		}
+        		return flag;
+        	}
+        }
+
+- 模拟BufferedReader中readLine()的实现方法
+
+
+            /**
+            自定义一个MyBufferedReader类，模拟其中的readLine()方法。
+            一次读取一行数据，这个是基于read()方法来实现的。
+            自定义实现原理：
+            1、通过FileReader中的read()一个个读取文件中的字符。
+            2、将读取的字符存到StringBuilder中。
+            3、当读到\r时，不存入StringBuilder中，继续向下读取。
+               当\n时返回字符串，
+            4、为了简便，所有异常都抛出
+
+            这种自定义类，称为装饰设计模式
+            */
+            import java.io.*;
+            class myBufferedReader{
+            	private FileReader fr;
+            	public myBufferedReader(FileReader fr){
+            		this.fr = fr;
+            	}
+            	public String myReadLine()throws IOException{
+            		StringBuilder sb = new StringBuilder();
+            		int ch = 0;
+            		while((ch=fr.read())!=-1){
+            			if(ch=='\r')
+            				continue;
+            			if(ch=='\n')
+            				return sb.toString();
+            			sb.append((char)ch);
+            		}
+            		if(sb.length()!=0)
+            			return sb.toString();
+            		//读取到最后，返回空
+            		return null;
+            	}
+            	//关闭流
+            	public void myClose()throws IOException{
+            		fr.close();
+            	}
+            }
+            public class MyBufferedReaderDemo{
+            	public static void main(String args[])throws IOException{
+            		myBufferedReader mbr = new myBufferedReader(new FileReader("demo.txt"));
+            		String line = null;
+            		while((line=mbr.myReadLine())!=null){
+            			System.out.println(line);
+            		}
+            		mbr.myClose();
+            	}
+            }
+
