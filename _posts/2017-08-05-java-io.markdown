@@ -74,3 +74,31 @@ tags:
             OutputStream out = new FileOutPutStream(“1.jpg”); —— 写入字节
 
             写文件时：注意 flush(); 方法的使用。一般在写文件的 循环中使用。用来保证每次内容不被覆盖。
+
+
+### 例：
+
+- FileWriter的方法：
+
+
+                public class FileWriterDemo{
+                	public static void main(String args[]){
+                		//创建对象,传入一个true，表明不覆盖文件，在文件后面继续添加内容。
+                		FileWriter fileWriter = null;
+                		try{
+                			fileWriter = new FileWriter("demo.txt",true);
+                			fileWriter.write("hello");
+                		}catch(IOException e){
+                			System.out.println("catch:"+e.toString());
+                		}finally{
+                			try{
+                				if(fileWriter!=null)
+                					fileWriter.close();
+                			}catch(Exception e){
+                				System.out.println("----"+e.toString());
+                			}
+                		}
+                	}
+                }
+
+-
