@@ -388,3 +388,46 @@ tags:
             		bufr.close();
             		bufw.close();
             	}
+            	/**
+            	掌握什么时候使用哪种类型的流
+            	要做到3个明确
+            	1、明确源和目的
+            	源包括：内存、硬盘、键盘。使用InputStream Reader
+            	目的包括：内存、硬盘、控制台。使用OutputStream Writer
+            	若操作的是文本对象，那么选择Reader
+            	若是图片、mp3等资源文件，使用Stream对象
+            	2、明确操作的设备：内存、硬盘、控制台。确定使用哪个对象
+            	3、。。。。。。
+            	*/
+            	//打印异常日志信息
+            	public static void exceptionInfo(){
+            		try{
+            			int[] arr = new int[]{0,2,1};
+            			System.out.println(arr[3]);
+            		}catch(Exception e){
+            			PrintStream ps = null;
+            			try{
+            				Date d = new Date();
+            				SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒");
+            				String s = sdf.format(d);
+            			//重写printStackTrace(PrintStream s) 方法
+            			 ps =new PrintStream("exception.log");
+            			 ps.print(s);
+            			 System.setOut(ps);
+            			}catch(Exception ex){
+            				throw new RuntimeException("日志录入出错");
+            			}
+            			e.printStackTrace(System.out);
+            		}
+            	}
+            	//打印系统信息
+            	public static void printProperty()throws IOException{
+
+            		Properties p =  System.getProperties();
+            		PrintStream ps  = new PrintStream("properties.txt");
+            		//该方法是设置流到指定的目的中去
+            		System.setOut(ps);
+            		//设置打印对象
+            		p.list(System.out);
+            	}
+            }
