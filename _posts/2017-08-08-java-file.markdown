@@ -58,4 +58,17 @@ tags:
 
 - isFile() 是否是文件
 
--
+- length() 文件长度
+
+- list(） 返回字符串数组，表示该路径的文件和目录，File 接收
+
+- listFiles() 返回目录中文件，File 接收
+
+- mkdir() 创建目录
+
+- renameTo() 重命名
+
+- toString() 返回路径名字符串
+
+- toURI() 构造一个路径
+
