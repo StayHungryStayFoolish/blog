@@ -1,0 +1,38 @@
+---
+layout:     post
+title:      "Java File 文件"
+subtitle:   "对文件进行操作"
+iframe:     ""
+navcolor:   "invert"
+author:     "Bonismo"
+date:       2017-07-28
+header-img: "img/java/hello-world-banner.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - 泛型
+    - 类型安全
+    - 类型检查
+    - 简化代码
+---
+
+### File
+
+- File 指代文件 file 或目录 directory
+
+- File 不处理文件内容，只处理文件或目录的周边信息
+
+    - 创建文件，对文件进行删除、获取文件所在目录信息、更改文件名字等
+
+### 主要方法介绍
+
+- canRead() 是否可读
+
+- canWrite() 是否科协
+
+- compareTo() 按字母顺序比较路径
+
+- createNewFile() 创建文件
+
+- delete() 删除文件
+
