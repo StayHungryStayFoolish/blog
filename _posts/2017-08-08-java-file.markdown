@@ -34,5 +34,28 @@ tags:
 
 - createNewFile() 创建文件
 
-- delete() 删除文件
+- delete() 删除文件或目录
 
+- deleteOnExit() 在虚拟机终止时，请求删除文件或目录
+
+- exists() 文件是否存在
+
+- getAbsoluteFile() 获取绝对路径名形式
+
+- getAbsolutePath() 获取绝对路径字符串形式
+
+- getName() 获取路径名的文件或目录名称
+
+- getParent() 获取父目录名字符串，无则返回 null
+
+- getParentFile() 获取父目录路径名，无则返回 null
+
+- getPath() 获取路径字符串
+
+- isAbsolute() 是否局对路径
+
+- isDirectory() 是否是目录
+
+- isFile() 是否是文件
+
+-
