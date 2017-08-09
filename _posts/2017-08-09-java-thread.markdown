@@ -52,7 +52,7 @@ tags:
 
     适合资源的共享
 
- `Thread 是 Runnable 的接口的实现类`
+ `Thread 是 Runnable 的接口的实现类`  public class Thread extends Object implements Runnable
 
 ### 例：
 
@@ -105,3 +105,42 @@ tags:
             };
 
     `虽然现在程序中有三个线程，但是一共卖了10张票，也就是说使用Runnable实现多线程可以达到资源共享目的。`
+
+### 多线程同步 synchronized
+
+- 为什么需要同步多线程？
+
+    线程的同步是指让多个运行的线程在一起良好地协作，达到让多线程按要求合理地占用释放资源。我们采用Java中的同步代码块和同步方法达到这样的目的。
+
+    例：
+
+
+
+    `这种状态下多线程执行的结果是随机地去任意插入执行，这完全取决于JVM对于线程的调度，在很多要求定序执行的情况下，这种随机执行的状态显然是不合要求的。`
+
+- 同步方法
+
+    例：
+
+    ``` java
+
+        public class ThreadTest {
+                public static void main(String[] args) {
+                      MyThread thread = new MyThread();
+                      Thread th1= new Thread(thread);
+                      Thread th2= new Thread(thread);
+                      th1.start();
+                      th2.start();
+               }
+
+        }
+
+        class MyThread implements Runnable{
+                @Override
+                public synchronized void run() {
+                       for( int i=0;i<10;i++)
+                             System. out.println(Thread. currentThread().getName()+" counter:"+i);
+               }
+        }
+
+    ```
