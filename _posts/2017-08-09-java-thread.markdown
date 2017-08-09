@@ -185,3 +185,78 @@ tags:
     3.然而，当一个线程访问object的一个synchronized同步代码块或同步方法时，另一个线程仍然可以访问该object中的非synchronized同步代码块或非synchronized同步方法。
 
     4.尤其关键的是，当一个线程访问object的一个synchronized同步代码块或同步方法时，其他线程对object中所有其它synchronized同步代码块或同步方法的访问将被阻塞。
+
+    - 1.以下这个例子可以说明synchronized方法的这些特性，同步代码块也是一样：
+
+      I. synchronized方法表面上它只是锁定了当前的方法本身，实际上当synchronized方法起作用的时候，整个对象的带有synchronized的方法都将被锁定，这也就是为什么当一个线程执行一个synchronized方法时，其他的线程除了不能访问当前的同步方法外还并不能访问其他的同步方法，而只能访问非synchronized方法，因为这种锁定是对象级别的。
+
+      ```java
+            public class ThreadTest {
+                    public static void main(String[] args) {
+                           final MyTask myTask = new MyTask();
+                          Thread thread1 = new Thread( new Runnable() {
+                                  public void run() {
+                                       myTask.doTask1();
+                                 }
+                          });
+                          Thread thread2 = new Thread( new Runnable() {
+                                  public void run() {
+                                       myTask.doTask2();
+                                 }
+                          });
+                          thread1.start();
+                          thread2.start();
+                   }
+            }
+
+            class MyTask{
+                    public synchronized void doTask1() {
+                           for ( int i = 0; i < 5; i++) {
+                                 System. out.println( "1 This is real Tasking "+i);
+                          }
+                   }
+                    public void doTask2() {
+                           for ( int i = 0; i < 5; i++) {
+                                 System. out.println( "2 This is real Tasking "+i);
+                          }
+                   }
+            }
+      ```
+
+      II.如使在静态方法中用synchronized时，因为这个方法就不是仅属于某个对象而是属于整个类的了，所以一旦一个线程进入了这个代码块就会将这个类的所有对象的所有synchronized方法或synchronized同步代码块锁定，其他的线程就没有办法访问所有这些对象的synchronized方法和synchronized代码块（注意其他线程还是仍然能访问这些对象的非synchronized方法和synchronized代码块的），因此这种锁定是class级别的。
+
+      ```java
+            public class FormalThreadClass {
+                    public static void main(String[] args) {
+                          MyTask myTask1 = new MyTask();
+                          MyTask myTask2 = new MyTask();
+                          Thread thread1 = new Thread( new MyRunnable(myTask1));
+                          Thread thread2 = new Thread( new MyRunnable(myTask2));
+                          thread1.start();
+                          thread2.start();
+                   }
+            }
+
+            class MyRunnable implements Runnable {
+                   MyTask myTask;
+                    public MyRunnable(MyTask myTask) {
+                           this. myTask = myTask;
+                   }
+                    @Override
+                    public void run() {
+                          MyTask. doTask();
+                   }
+            }
+
+            class MyTask {
+                    public static synchronized void doTask() {
+                           for ( int i = 0; i < 5; i++) {
+                                 System. out.println(Thread. currentThread().getName()+" running "+i);
+                          }
+                   }
+            }
+      ```
+
+    - 2.synchronized同步代码块是对一个对象作为参数进行锁定。
+
+     I. 如在使用synchronized(this)时，一旦一个线程进入了这个代码块就会将整个对象的所有synchronized方法或synchronized同步代码块锁定，其他的线程就没有办法访问这个对象的synchronized方法和synchronized代码块（注意其他线程还是仍然能访问这个对象的非synchronized方法和synchronized代码块的）。
