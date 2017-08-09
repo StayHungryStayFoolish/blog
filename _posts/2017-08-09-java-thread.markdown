@@ -260,3 +260,41 @@ tags:
     - 2.synchronized同步代码块是对一个对象作为参数进行锁定。
 
      I. 如在使用synchronized(this)时，一旦一个线程进入了这个代码块就会将整个对象的所有synchronized方法或synchronized同步代码块锁定，其他的线程就没有办法访问这个对象的synchronized方法和synchronized代码块（注意其他线程还是仍然能访问这个对象的非synchronized方法和synchronized代码块的）。
+
+     ```java
+        public class ThreadTest {
+                public static void main(String[] args) {
+                       final MyTask myTask = new MyTask();
+                      Thread thread1 = new Thread( new Runnable() {
+                              public void run() {
+                                   myTask.doTask1();
+                             }
+                      });
+                      Thread thread2 = new Thread( new Runnable() {
+                              public void run() {
+                                   myTask.doTask2();
+                             }
+                      });
+                      thread1.start();
+                      thread2.start();
+               }
+        }
+
+        class MyTask {
+                public void doTask1() {
+
+                       synchronized (this) {
+                              for ( int i = 0; i < 5; i++) {
+                                   System. out.println( "1 is running");
+                             }
+                      }
+
+               }
+
+                public void doTask2() {
+                       for ( int i = 0; i < 5; i++) {
+                             System. out.println( "2 is running");
+                      }
+               }
+        }
+     ```
