@@ -114,7 +114,33 @@ tags:
 
     例：
 
+    ```java
 
+        public class TwoThreadTest {
+                         public static void main(String[] args) {
+                               Thread th1= new MyThread1();
+                               Thread th2= new MyThread2();
+                               th1.start();
+                               th2.start();
+                        }
+                 }
+
+                 class MyThread2 extends Thread{
+                         @Override
+                         public void run() {
+                                for( int i=0;i<10;i++)
+                                      System. out.println( "thread 1 counter:"+i);
+                        }
+                 }
+
+                 class MyThread1 extends Thread{
+                         @Override
+                         public void run() {
+                                for( int i=0;i<10;i++)
+                                      System. out.println( "thread 2 counter:"+i);
+                        }
+                 }
+    ```
 
     `这种状态下多线程执行的结果是随机地去任意插入执行，这完全取决于JVM对于线程的调度，在很多要求定序执行的情况下，这种随机执行的状态显然是不合要求的。`
 
