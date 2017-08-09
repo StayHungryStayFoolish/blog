@@ -298,3 +298,41 @@ tags:
                }
         }
      ```
+
+     `所以：synchronized方法实际上等同于用一个synchronized块包住方法中的所有语句，然后在synchronized块的括号中传入this关键字。当然，如果是静态方法，需要锁定的则是class对象。 I.如在使用synchronized(.class)时，一旦一个线程进入了这个代码块就会将整个类的所有这个synchronized(.class) 同步代码块锁定，其他的线程就没有办法访问这个对象的synchronized(**.class) 代码块，这种锁也是class级别的，但要注意在这种情况下，其他线程仍然是可以访问仅做了synchronized的代码块或非静态方法的，因为它们仅仅是对当前对象的锁定。`
+
+     ```java
+        public class FormalThreadClass {
+                public static void main(String[] args) {
+                      MyTask myTask1 = new MyTask();
+                      MyTask myTask2 = new MyTask();
+                      Thread thread1 = new Thread( new MyRunnable(myTask1));
+                      Thread thread2 = new Thread( new MyRunnable(myTask2));
+                      thread1.start();
+                      thread2.start();
+               }
+        }
+
+        class MyRunnable implements Runnable {
+               MyTask myTask;
+                public MyRunnable(MyTask myTask) {
+                       this. myTask = myTask;
+               }
+                @Override
+                public void run() {
+                       myTask.doTask();
+               }
+        }
+
+        class MyTask {
+                public  void doTask() {
+                       synchronized (MyTask.class ) {
+                              for ( int i = 0; i < 5; i++) {
+                                   System. out.println(Thread. currentThread().getName()+" running "+i);
+                             }
+                      }
+               }
+        }
+     ```
+
+- 总结：
