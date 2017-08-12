@@ -188,7 +188,8 @@ tags:
 
     - 1.以下这个例子可以说明synchronized方法的这些特性，同步代码块也是一样：
 
-      I. synchronized方法表面上它只是锁定了当前的方法本身，实际上当synchronized方法起作用的时候，整个对象的带有synchronized的方法都将被锁定，这也就是为什么当一个线程执行一个synchronized方法时，其他的线程除了不能访问当前的同步方法外还并不能访问其他的同步方法，而只能访问非synchronized方法，因为这种锁定是对象级别的。
+      I. synchronized方法表面上它只是锁定了当前的方法本身，实际上当synchronized方法起作用的时候，整个对象的带有synchronized的方法都将被锁定，
+      这也就是为什么当一个线程执行一个synchronized方法时，其他的线程除了不能访问当前的同步方法外还并不能访问其他的同步方法，而只能访问非synchronized方法，因为这种锁定是对象级别的。
 
       ```java
             public class ThreadTest {
@@ -223,7 +224,9 @@ tags:
             }
       ```
 
-      II.如使在静态方法中用synchronized时，因为这个方法就不是仅属于某个对象而是属于整个类的了，所以一旦一个线程进入了这个代码块就会将这个类的所有对象的所有synchronized方法或synchronized同步代码块锁定，其他的线程就没有办法访问所有这些对象的synchronized方法和synchronized代码块（注意其他线程还是仍然能访问这些对象的非synchronized方法和synchronized代码块的），因此这种锁定是class级别的。
+      II.如使在静态方法中用synchronized时，因为这个方法就不是仅属于某个对象而是属于整个类的了，所以一旦一个线程进入了这个代码块就会将这个类的所有对象的所有synchronized方法
+      或synchronized同步代码块锁定，其他的线程就没有办法访问所有这些对象的synchronized方法和synchronized代码块
+      （注意其他线程还是仍然能访问这些对象的非synchronized方法和synchronized代码块的），因此这种锁定是class级别的。
 
       ```java
             public class FormalThreadClass {
@@ -259,7 +262,9 @@ tags:
 
     - 2.synchronized同步代码块是对一个对象作为参数进行锁定。
 
-     I. 如在使用synchronized(this)时，一旦一个线程进入了这个代码块就会将整个对象的所有synchronized方法或synchronized同步代码块锁定，其他的线程就没有办法访问这个对象的synchronized方法和synchronized代码块（注意其他线程还是仍然能访问这个对象的非synchronized方法和synchronized代码块的）。
+     I. 如在使用synchronized(this)时，一旦一个线程进入了这个代码块就会将整个对象的所有synchronized方法
+     或synchronized同步代码块锁定，其他的线程就没有办法访问这个对象的synchronized方法
+     和synchronized代码块（注意其他线程还是仍然能访问这个对象的非synchronized方法和synchronized代码块的）。
 
      ```java
         public class ThreadTest {
@@ -299,7 +304,10 @@ tags:
         }
      ```
 
-     `所以：synchronized方法实际上等同于用一个synchronized块包住方法中的所有语句，然后在synchronized块的括号中传入this关键字。当然，如果是静态方法，需要锁定的则是class对象。 I.如在使用synchronized(.class)时，一旦一个线程进入了这个代码块就会将整个类的所有这个synchronized(.class) 同步代码块锁定，其他的线程就没有办法访问这个对象的synchronized(**.class) 代码块，这种锁也是class级别的，但要注意在这种情况下，其他线程仍然是可以访问仅做了synchronized的代码块或非静态方法的，因为它们仅仅是对当前对象的锁定。`
+     `所以：synchronized方法实际上等同于用一个synchronized块包住方法中的所有语句，然后在synchronized块的括号中传入this关键字。
+     当然，如果是静态方法，需要锁定的则是class对象。 I.如在使用synchronized(.class)时，一旦一个线程进入了这个代码块就会将整个类的所有这个synchronized(.class)
+      同步代码块锁定，其他的线程就没有办法访问这个对象的synchronized(**.class) 代码块，这种锁也是class级别的，但要注意在这种情况下，
+      其他线程仍然是可以访问仅做了synchronized的代码块或非静态方法的，因为它们仅仅是对当前对象的锁定。`
 
      ```java
         public class FormalThreadClass {
