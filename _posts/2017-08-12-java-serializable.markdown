@@ -34,6 +34,8 @@ tags:
 
 ### 例：
 
+- 序列化一个类
+
     ```java
         public class User implements Serializable {
            private Integer id;
@@ -62,3 +64,20 @@ tags:
            }
         }
     ```
+
+- IO 写入
+
+    ```java
+        public class OutputTest {
+           public static void main(String[] args) {
+               User user = new User(1, "username", 1.8, true);
+               try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("user.data"))) {
+                   objectOutputStream.writeObject(user);
+               } catch (IOException e) {
+                   e.printStackTrace();
+               }
+           }
+        }
+    ```
+
+- IO 重构
