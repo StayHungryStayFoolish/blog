@@ -93,4 +93,7 @@ tags:
               }
           }
        }
+
+
+       // User{id=1, name='username', height=1.8, isMarried=false}
     ```
