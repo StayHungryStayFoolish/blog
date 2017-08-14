@@ -245,3 +245,19 @@ Java反射机制允许程序在运行时加载、探知、使用编译期间完�
     ```
 
 - Modifiers 获取修饰符
+
+    ```java
+        class HumanTest {
+             public static void main(String[] args) throws NoSuchFieldException {
+                 Human human = new Human();
+                 System.out.println(Modifier.toString(human.getClass().getModifiers()));
+                 Field field = human.getClass().getField("name");
+                 System.out.println(Modifier.toString(field.getModifiers()));
+             }
+         }
+
+         /*
+         public final
+         public
+          */
+    ```
