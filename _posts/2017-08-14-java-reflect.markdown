@@ -201,4 +201,47 @@ Java反射机制允许程序在运行时加载、探知、使用编译期间完�
         */
    ```
 
+- Constructors 获取构造器
 
+    ```java
+       class HumanTest {
+         public static void main(String[] args) {
+             Human human = new Human();
+             Constructor[] constructors = human.getClass().getConstructors();
+             System.out.println("--- getConstructors ---");
+             for (Constructor constructor : constructors) {
+                 System.out.println(constructor.getName());
+                 for (Parameter parameter : constructor.getParameters()) {
+                     System.out.println("\t" + parameter);
+                 }
+             }
+
+             Constructor[] declaredConstructors = human.getClass().getDeclaredConstructors();
+             System.out.println("--- getDeclaredConstructors ---");
+             for (Constructor declaredConstructor : declaredConstructors) {
+                 System.out.println(declaredConstructor.getName());
+                 for (Parameter parameter : declaredConstructor.getParameters()) {
+                     System.out.println("\t" + parameter);
+                 }
+             }
+         }
+       }
+
+       /*
+       --- getConstructors ---
+       Human
+         int arg0
+         double arg1
+         java.lang.String arg2
+         boolean arg3
+       --- getDeclaredConstructors ---
+       Human
+       Human
+         int arg0
+         double arg1
+         java.lang.String arg2
+         boolean arg3
+       */
+    ```
+
+- Modifiers 获取修饰符
