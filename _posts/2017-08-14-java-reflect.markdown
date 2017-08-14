@@ -131,4 +131,74 @@ Java反射机制允许程序在运行时加载、探知、使用编译期间完�
     ```
 
 
+- Fields，获取域
+
+    ```java
+        lass HumanTest {
+          public static void main(String[] args) {
+              Human human = new Human();
+              Field[] fields = human.getClass().getFields();
+              System.out.println("--- getFields() ---");
+              for (Field field : fields) {
+                  System.out.println(field.getName());
+              }
+              Field[] declaredFields = human.getClass().getDeclaredFields();
+              System.out.println("--- getDeclaredFields() ---");
+              for (Field declaredField : declaredFields) {
+                  System.out.println(declaredField.getName());
+              }
+          }
+        }
+
+        /*
+        --- getFields() ---
+        name
+        age
+        --- getDeclaredFields() ---
+        name
+        married
+        */
+    ```
+
+- Methods 获取方法
+
+   ```java
+        class HumanTest {
+          public static void main(String[] args) {
+              Human human = new Human();
+              Method[] methods = human.getClass().getMethods();
+              System.out.println("--- getMethods ---");
+              for (Method method : methods) {
+                  System.out.println(method);
+              }
+              Method[] declaredMethods = human.getClass().getDeclaredMethods();
+              System.out.println("--- getDeclaredMethods ---");
+              for (Method declaredMethod : declaredMethods) {
+                  System.out.println(declaredMethod);
+              }
+          }
+        }
+
+        /*
+        --- getMethods ---
+        public int java1702.javase.regex.Human.sleep(int)
+        public void java1702.javase.regex.Human.study(java.lang.String)
+        public void java1702.javase.regex.Human.eat(java.lang.String)
+        public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+        public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+        public final void java.lang.Object.wait() throws java.lang.InterruptedException
+        public boolean java.lang.Object.equals(java.lang.Object)
+        public java.lang.String java.lang.Object.toString()
+        public native int java.lang.Object.hashCode()
+        public final native java.lang.Class java.lang.Object.getClass()
+        public final native void java.lang.Object.notify()
+        public final native void java.lang.Object.notifyAll()
+        --- getDeclaredMethods ---
+        public int java1702.javase.regex.Human.sleep(int)
+        public void java1702.javase.regex.Human.study(java.lang.String)
+        private void java1702.javase.regex.Human.killAnimals(java.lang.String)
+        public void java1702.javase.regex.Human.eat(java.lang.String)
+        */
+   ```
+
 
