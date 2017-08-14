@@ -36,7 +36,99 @@ Java反射机制允许程序在运行时加载、探知、使用编译期间完�
 
 ### Methods 类
 
+- getMethods()
 
+- getDeclaredMethods()
+
+### Constructors 类
+
+- getConstructors()
+
+- getDeclaredConstructors()
+
+### Modifiers 类
+
+- getModifiers() 获取修饰符
+
+
+### 使用反射机制获取 java.lang.String 类的所有域、构造方法、成员方法
+
+- 区别:
+
+    get 方法 不带 Declared 时，只能获取当前 除 private 的 域、构造器、方法
+
+    带 Declared 时，可以获得 private 的。
+
+    设置访问权限 setAccessible(); true 时，只对 private 有效
+
+
+
+### 例：
+
+- Demo:
+
+    ```java
+         // super class Animals
+         class Animals {
+             public int age; // It's public
+             private double weight;
+
+             public Animals() {
+             }
+
+             public Animals(int age, double weight) {
+                 this.age = age;
+                 this.weight = weight;
+             }
+
+             public int sleep(int hours) {
+                 return hours;
+             }
+
+             public void eat(String food) {
+                 System.out.println("eating " + food);
+             }
+
+             // This's a private method!
+             private void killHuman() {
+                 System.out.println("killed a poor guy...");
+             }
+
+             // getters and setters
+         }
+
+
+         // sub class Human
+          public final class Human extends Animals {
+              public String name; // It's public!
+              private boolean married;
+
+              Human() { // It's package-private!
+              }
+
+              public Human(int age, double weight, String name, boolean married) {
+                  super(age, weight);
+                  this.name = name;
+                  this.married = married;
+              }
+
+              @Override
+              public void eat(String food) {
+                  System.out.println(name + " is now eating " + food);
+              }
+
+              public void study(String course) {
+                  System.out.println(name + " is now studying " + course);
+              }
+
+              // This's a private method!
+              private void killAnimals(String animal) {
+                  System.out.println(name + " is now killing " + animal);
+              }
+
+              // getters and setters
+          }
+    ```
 
 
 
