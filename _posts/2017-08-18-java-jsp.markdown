@@ -1,0 +1,24 @@
+---
+layout:     post
+title:      "JavaEE JSP"
+subtitle:   "基础语法"
+iframe:     ""
+navcolor:   "invert"
+author:     "Bonismo"
+date:       2017-07-28
+header-img: "img/java/hello-world-banner.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - JSP
+    - 元素
+---
+
+### JSP
+
+- JSP 的由来
+
+    HTML 网页是一种静态网页，一旦内容写入页面，内容将不会发生变化，
+    不能随着内容的改变，在页面实时更新。随着实际商业需求的日益多样化，人们
+    需要一种提供动态内容的技术。
+
