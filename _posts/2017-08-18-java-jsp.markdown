@@ -11,10 +11,13 @@ header-mask: 0.3
 catalog:    true
 tags:
     - JSP
+    - Servlet
     - 元素
 ---
 
 ### JSP
+
+- Java Server Pages
 
 - JSP 的由来
 
@@ -22,3 +25,4 @@ tags:
     不能随着内容的改变，在页面实时更新。随着实际商业需求的日益多样化，人们
     需要一种提供动态内容的技术。
 
+    Sun 公司制定了一种服务端动态生成页面的脚本技术规范 --- JSP `[` 本质还是 Servlet `]`
