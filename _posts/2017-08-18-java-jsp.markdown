@@ -15,6 +15,32 @@ tags:
     - 元素
 ---
 
+### Servlet
+
+- Sun 公司推出的一套规范，规定如何使用 Java 来开发动态网站。即`开发网站后台标准`
+
+- 使用 Servlet，可以接收用户在页面提交的`表单信息`、`查询数据库`、`用户信息`等。
+
+- 声明周期
+
+    1. 加载
+
+       运行 Tomcat、Jetty 容器是完成，或者客户端发来请求
+
+    2. 实例化
+
+       读取配置信息、初始化参数等。`在整个生命周期，只需要运行一次`，运行 init() 方法。
+
+    3. 服务
+
+       当容器接收到客户端请求时， Servlet 引擎将创建一个 ServletRequest `请求对象`
+       和 ServletResponse `响应对象`，然后把这两个对象作为参数传递给 Servlet 的 service
+       方法。自动派遣运行 doGet() 或 doPost()。
+
+    4. 销毁
+
+       销毁指 Servlet 的卸载由容器本身定义和实现的，需要调用 destroy() 方法，以释放资源。
+
 ### JSP
 
 - Java Server Pages
