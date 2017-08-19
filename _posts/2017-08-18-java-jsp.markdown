@@ -73,4 +73,14 @@ tags:
 
         I.声明 `<%! class 类体内  %>`
 
-        I.小脚本 `<%! class 类体内  %>`
+        I.小脚本 `<%! 方法内  %>`
+
+        III.表达式 expression <%= %> out.print() 方法的参数
+
+    4. 指令元素
+
+        I.page 指令 `<%@ page %>`
+
+        II.include 指令 `<%@ include %>`
+
+        III.taglib 指令 `<%@ taglib %>`
