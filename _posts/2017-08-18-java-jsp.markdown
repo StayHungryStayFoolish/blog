@@ -130,3 +130,27 @@ tags:
     </body>
     </html>
 ```
+
+### 容器
+
+常见的有 `Tomcat` 、`Jetty`、`JBoss`，推荐使用`Tomcat`
+
+### 九大隐式对象
+
+- request 一次请求
+
+- response 响应
+
+- out 输出
+
+- session 会话
+
+- application 应用
+
+- config 配置
+
+- pageContext 应用上下问
+
+- page 页面
+
+- Exception 异常
