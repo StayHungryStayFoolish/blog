@@ -151,13 +151,13 @@ tags:
 
     - getAttribute() 获取属性
 
-    - getRequestDispatcher().forward() 页面转发
+    - getRequestDispatcher().forward() `页面转发`
 
     - setCharacterEncoding() 设置字符编码集
 
 - response 响应
 
-    - sendRedirect() 重定向页面
+    - sendRedirect() `页面重定向`
 
     - setCharacterEncoding() 设置字符编码集
 
@@ -178,3 +178,16 @@ tags:
 - page 页面
 
 - Exception 异常
+
+### 转发、重定区别
+
+- 都可以实现页面之间跳转
+
+- 转发`forward` 不改变地址栏地址，用户看不到页面实际上跳转到了哪个页面
+
+- 重定向 `redirect` 改变地址栏地址，用户可以清晰看到跳转到了哪个页面
+
+- 转发可以保存 `request` 范围的属性，重定向不会，因为重定向在页面跳转时，
+  已经丢失了 `request` 范围内的属性。`request 的范围是一次请求，重定向发送了两次请求`
+
+
