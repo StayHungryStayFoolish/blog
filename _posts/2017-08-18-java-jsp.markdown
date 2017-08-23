@@ -204,8 +204,14 @@ tags:
 
 - 1.pageContext 只在当前页面有效
 
-- 2.request 一次请求之内有效 `常用`
+- 2.request 一次请求之内有效 `常用`，配合页面转发 `forward` 使用
 
-- 3.session 一次会话之内有效 `常用`
+- 3.session 一次会话之内有效 `常用`，配合页面重定向 `redirect` 使用
 
 - 4.application 应用之中
+
+### 范围内添加属性、获取属性
+
+- setAttribute()
+
+- getAttribute()
