@@ -137,9 +137,33 @@ tags:
 
 ### 九大隐式对象
 
-- request 一次请求
+- request 请求，级别低
+
+    - getParameter() 获取页面表单（`form`）参数
+
+    - getParameterValues() 获取页面多选、下拉列表、复选表单（`form`）参数
+
+    - getRemoteAddr() 获取远程地址
+
+    - getSession() 获取会话`session`
+
+    - setAttribute() 设置属性
+
+    - getAttribute() 获取属性
+
+    - getRequestDispatcher().forward() 页面转发
+
+    - setCharacterEncoding() 设置字符编码集
 
 - response 响应
+
+    - sendRedirect() 重定向页面
+
+    - setCharacterEncoding() 设置字符编码集
+
+    - setContentType() 设置响应内容类型
+
+    - getWriter() 获取写入流
 
 - out 输出
 
