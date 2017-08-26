@@ -41,6 +41,12 @@ tags:
 
        销毁指 Servlet 的卸载由容器本身定义和实现的，需要调用 destroy() 方法，以释放资源。
 
+- 注解式配置
+
+    @WebServlet(urlPatterns= "/your_pattern")
+
+    urlPatterns 后边的路径对应的是 `form` 表单内的 `action` 路径
+
 ### JSP
 
 - Java Server Pages
