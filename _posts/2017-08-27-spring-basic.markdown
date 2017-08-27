@@ -194,3 +194,18 @@ tags:
         #methodName = saveToUsb
      ```
 
+    `底层模块`
+
+    ```java
+        public class FloppyWriter {
+            public void writeToFloppy(){
+                System.out.println("save to floppy");
+            }
+        }
+
+        public class UsbWriter {
+            public void saveToUsb(){
+                System.out.println("save to USB");
+            }
+        }
+    ```
