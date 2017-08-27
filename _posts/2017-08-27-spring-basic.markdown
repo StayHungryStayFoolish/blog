@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Spring Framework --- Spring"
+title:      "Spring Framework --- Spring 引言"
 subtitle:   "Spring Basic"
 iframe:     ""
 navcolor:   "invert"
@@ -101,6 +101,8 @@ tags:
 
 ### 松散耦合
 
+
+
 - 例：
 
     `创建一个接口，抽象底层应用类方法`
@@ -167,4 +169,7 @@ tags:
 
     ```
 
--
+- `注：松散耦合下，只需更改一行代码即可`
+
+### 利用反射机制，不更改代码
+
