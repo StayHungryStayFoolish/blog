@@ -151,4 +151,20 @@ tags:
 
     ```
 
-    ``
+    `应用类`
+
+    ```java
+        public class BusinessTest {
+            public static void main(String[] args) {
+
+                // 构建无参，set 方法，构建类的实例，通过类的实例调用方法
+                Business business = new Business();
+                // 如果更改需求，只需要更改 setDeviceWriter()内参数即可
+                business.setDeviceWriter(new FloppyWriter());
+                business.saveData();
+            }
+        }
+
+    ```
+
+-
