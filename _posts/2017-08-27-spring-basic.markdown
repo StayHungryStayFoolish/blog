@@ -101,7 +101,11 @@ tags:
 
 ### 松散耦合
 
+- 高层应用类 不依赖 底层模块类
 
+- 底层模块类 不控制 高层应用类
+
+- 底层由改变，高层应用类不需要更代码
 
 - 例：
 
@@ -172,4 +176,21 @@ tags:
 - `注：松散耦合下，只需更改一行代码即可`
 
 ### 利用反射机制，不更改代码
+
+- 使用属性文件注入
+
+- 更改需求，只需要修改属性文件即可
+
+- 例：
+
+    `新建一个 config.properties` 文件 `[` K - V 结构，存储读取数据`]`
+    className 即 FQN 相对路径
+
+     ```java
+        className = packageName.FloppyWriter
+        methodName = writeToFloppy
+
+        #className = packageName.UsbWriter
+        #methodName = saveToUsb
+     ```
 
