@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Spring Framework --- Spring 引言"
-subtitle:   "Spring Basic"
+subtitle:   "强耦合、松散耦合、反射 "
 iframe:     ""
 navcolor:   "invert"
 author:     "Bonismo"
@@ -248,3 +248,9 @@ tags:
             }
         }
     ```
+
+### Spring Framework
+
+`通过上述三个示例，可以发现，反射机制，是三种方法中最好的一个。`
+
+`Rod Johnson 设计并开源一个框架 Spring。为了解决企业应用开发的复杂性。`
