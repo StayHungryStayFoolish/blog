@@ -184,7 +184,7 @@ tags:
 - 例：
 
     `新建一个 config.properties` 文件 `[` K - V 结构，存储读取数据`]`
-    className 即 FQN 相对路径
+    `className 即 FQN 相对路径`
 
      ```java
         className = packageName.FloppyWriter
@@ -206,6 +206,45 @@ tags:
         public class UsbWriter {
             public void saveToUsb(){
                 System.out.println("save to USB");
+            }
+        }
+    ```
+
+    `利用反射机制，构建一个高层应用框架，比松散耦合，更适用与复杂场景应用`
+    `Absolute_Path 是绝对路径地址`
+
+    ```java
+        public class BusinessSevice {
+            private static final String CONFIG_BUSINESS = "Absolute_Path/config.properties";
+
+            public void saveData() {
+
+                // 实例化 Properties 类，保存属性持久的类
+                Properties properties = new Properties();
+                try {
+                    // 从输入流中加载属性集，注意传参方法，new FileInputStream(属性地址FQN);
+                    properties.load(new FileInputStream(CONFIG_BUSINESS));
+                    // 获得 类 的名字，返回的是 String 类型 , 传参的 "className"，是 config 配置文件 类的路经地址
+                    String className = properties.getProperty("className");
+                    // 获得 方法 的名字，返回的是 String 类型
+                    String methodName = properties.getProperty("methodName");
+
+                    // 用 Class,反射机制获得 当前 类 ，传入 类的路径 className
+                    Class clazz = Class.forName(className);
+
+                    // 利用 类的实例化，获取当前  类的方法
+                    Method method = clazz.getDeclaredMethod(methodName);
+
+                    // 利用 类的实例化，获取当前  类的构造方法，主要是为了 invoke(); 传参使用
+                    Constructor constructor = clazz.getDeclaredConstructor();
+
+                    // 调用当前 类的方法 invoke(); 传入的参数，必须是构造器的实例化 即 constructor.newInstance()
+                    // invoke();对带有指定参数的指定对象调用由此 Method 对象表示的底层方法。
+                    method.invoke(constructor.newInstance());
+
+                } catch (IOException | ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+                    e.printStackTrace();
+                }
             }
         }
     ```
