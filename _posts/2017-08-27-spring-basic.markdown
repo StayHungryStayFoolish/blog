@@ -99,12 +99,56 @@ tags:
 
 - `上边示例代码很乱，因为根据实际需求，需要不停的更改底层模块代码，从而导致高层应用类的代码也要跟着改变`
 
-### 松散偶尔
+### 松散耦合
 
-- 创建一个接口，抽象底层应用类方法
+- 例：
+
+    `创建一个接口，抽象底层应用类方法`
 
     ```java
        public interface DeviceWriter {
            void writeToDevice();
        }
     ```
+
+    `底层接口`
+
+    ```java
+        public class UsbWriter implements DeviceWriter {
+
+            @Override
+            public void writeToDevice() {
+                System.out.println("write to Usb...");
+            }
+        }
+
+
+        public class FloppyWriter implements DeviceWriter {
+
+            @Override
+            public void writeToDevice() {
+                System.out.println("write to Floppy...");
+            }
+        }
+
+    ```
+
+    `松散耦合`
+
+    ```java
+        public class Business {
+            // 接口可以作为 域
+            private DeviceWriter deviceWriter;
+
+            public void setDeviceWriter(DeviceWriter deviceWriter) {
+                this.deviceWriter = deviceWriter;
+            }
+
+            public void saveData() {
+                deviceWriter.writeToDevice();
+            }
+        }
+
+    ```
+
+    ``
