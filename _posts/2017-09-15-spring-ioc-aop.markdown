@@ -100,3 +100,19 @@ Bean 组件在 org.springframework.beans 包下。
     - 你要在一颗苹果树上，结出西瓜大的苹果。就需要在苹果树上，切开一个口，
       把西瓜的东西包进去，然后再合上，于是西瓜大的苹果就有了。
 
+
+### Spring 、 SpringMVC
+
+- Spring 是一个管理 Bean 的容器，也是很多开源项目的总称。
+
+- SpringMVC 是 Spring 其中一个开源项目
+
+- 在 Spring - SpringMVC - MyBatis 框架中，大致`工作流程`
+
+  1. 一个 Http 请求，由应用程序容器（Tomcat）解析，转换为一个 request，
+
+  2. 通过 @Controller 注解，进入 SpringMVC 容器
+
+  3. SpringMVC 容器的前端控制器 DispatcherServlet 会去处理这个请求 Bean
+
+  4. Bean Factory 创建 Bean，然后依次进入 @Service @Dao 层 最后通过视图渲染传回到页面
