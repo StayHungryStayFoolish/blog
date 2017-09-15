@@ -10,9 +10,9 @@ header-img: "img/java/hello-world-banner.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
-    - Spring
-    - IOC
-    - AOP
+    - 强耦合
+    - 松散耦合
+    - 反射机制
 ---
 
 ### 强耦合
