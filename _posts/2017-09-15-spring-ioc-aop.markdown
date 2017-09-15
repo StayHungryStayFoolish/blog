@@ -36,4 +36,22 @@ tags:
 
 - Beans
 
-``
+### Beans
+
+`核心组件内，最核心的是 Beans，最核心功能是 Bean Factory`
+
+Bean 组件在 org.springframework.beans 包下。
+
+- Bean 的定义
+
+- Bean 的创建
+
+- Bean 的解析
+
+### Spring三大核心思想
+
+- DI （依赖注入）
+
+- IOC (控制反转)
+
+- AOP（面向切面）
