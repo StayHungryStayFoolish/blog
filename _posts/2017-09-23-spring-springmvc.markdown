@@ -45,3 +45,24 @@ tags:
    再生成 View 视图对象，最后进行渲染将处理结果通过页面展示给用户。
 
 
+### XML 文件
+
+
+
+- 在 spring-mvc.xml 中
+
+    配置 处理器映射器、处理器适配器
+
+        `<mvc:annotation-driven>`
+
+    配置组件扫描器，可以批量扫描 @Controller @Service
+
+        `<context:component-scan>`
+
+    视图解析器
+
+        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+            <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+            <property name="prefix" value="/WEB-INF/jsp/"/>
+            <property name="suffix" value=".jsp"/>
+        </bean>
