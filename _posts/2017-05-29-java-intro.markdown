@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Java 引言"
-subtitle:   "一杯咖啡产生的名字"
+subtitle:   "一杯咖啡产生名字 "
 date:       2017-05-29 22:10:00
 author:     "Bonismo"
 header-img: "img/java/hello-world-banner.jpg"
