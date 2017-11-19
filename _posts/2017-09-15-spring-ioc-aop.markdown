@@ -50,11 +50,11 @@ Bean 组件在 org.springframework.beans 包下。
 
 ### Spring三大核心思想
 
-- DI （依赖注入）
+- DI （依赖注入）`IOC 的基础`
 
-- IOC (控制反转)
+- IOC (控制反转) 设计模式
 
-- AOP（面向切面）
+- AOP（面向切面）设计思想
 
 ### DI 依赖注入
 
